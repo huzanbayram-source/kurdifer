@@ -62,5 +62,19 @@
     "kolay": "easy",
     "orta": "medium",
     "zor": "hard"
+  },
+  "kurmanji_sayfa": {
+    "rozet": "Kurmancî Categories",
+    "baslik_oncesi": "Kurmancî",
+    "baslik_vurgu": "words",
+    "baslik_sonrasi": "",
+    "altyazi": "127 words in Kurmancî dialect with pronunciation guide and example sentences."
+  },
+  "zazaca_sayfa": {
+    "rozet": "Zazakî Categories",
+    "baslik_oncesi": "Zazakî",
+    "baslik_vurgu": "words",
+    "baslik_sonrasi": "",
+    "altyazi": "127 words in Zazakî dialect with pronunciation guide and example sentences."
   }
 }

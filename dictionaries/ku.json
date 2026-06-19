@@ -62,5 +62,19 @@
     "kolay": "hêsan",
     "orta": "navîn",
     "zor": "zor"
+  },
+  "kurmanji_sayfa": {
+    "rozet": "Kategorîyên Kurmancî",
+    "baslik_oncesi": "",
+    "baslik_vurgu": "Peyvên",
+    "baslik_sonrasi": "Kurmancî",
+    "altyazi": "Di zaravayê Kurmancî de 127 peyv, bi rêbera bilêvkirinê û hevokên mînak."
+  },
+  "zazaca_sayfa": {
+    "rozet": "Kategorîyên Zazakî",
+    "baslik_oncesi": "",
+    "baslik_vurgu": "Peyvên",
+    "baslik_sonrasi": "Zazakî",
+    "altyazi": "Di zaravayê Zazakî de 127 peyv, bi rêbera bilêvkirinê û hevokên mînak."
   }
 }

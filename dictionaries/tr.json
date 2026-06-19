@@ -62,5 +62,19 @@
     "kolay": "Kolay",
     "orta": "Orta",
     "zor": "Zor"
+  },
+  "kurmanji_sayfa": {
+    "rozet": "Kurmancî Kategorileri",
+    "baslik_oncesi": "Kurmancî",
+    "baslik_vurgu": "kelimeler",
+    "baslik_sonrasi": "",
+    "altyazi": "Kurmancî lehçesinde 127 kelime, telaffuz rehberi ve örnek cümlelerle."
+  },
+  "zazaca_sayfa": {
+    "rozet": "Zazakî Kategorileri",
+    "baslik_oncesi": "Zazakî",
+    "baslik_vurgu": "kelimeler",
+    "baslik_sonrasi": "",
+    "altyazi": "Zazakî lehçesinde 127 kelime, telaffuz rehberi ve örnek cümlelerle."
   }
 }
