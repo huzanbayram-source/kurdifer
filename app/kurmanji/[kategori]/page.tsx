@@ -59,6 +59,12 @@ export default function KategoriPage({
               Zazaca
             </Link>
             <Link
+              href="/ebeveynler"
+              className="hidden rounded-full px-3 py-2 font-heading text-sm font-bold text-koyu/80 transition hover:bg-sari/40 hover:text-koyu sm:inline-flex"
+            >
+              Ebeveynler
+            </Link>
+            <Link
               href="/"
               className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
             >

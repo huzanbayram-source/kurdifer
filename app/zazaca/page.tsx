@@ -39,6 +39,7 @@ export default function ZazacaPage() {
           <ul className="hidden items-center gap-2 sm:flex">
             <NavLink href="/zazaca">Zazaca</NavLink>
             <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
+            <NavLink href="/ebeveynler">Ebeveynler</NavLink>
             <NavLink href="/videolar">Videolar</NavLink>
           </ul>
 
@@ -50,9 +51,10 @@ export default function ZazacaPage() {
           </Link>
         </nav>
 
-        <ul className="flex items-center justify-center gap-1 border-t border-koyu/10 px-4 py-2 sm:hidden">
+        <ul className="flex flex-wrap items-center justify-center gap-1 border-t border-koyu/10 px-4 py-2 sm:hidden">
           <NavLink href="/zazaca">Zazaca</NavLink>
           <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
+          <NavLink href="/ebeveynler">Ebeveynler</NavLink>
           <NavLink href="/videolar">Videolar</NavLink>
         </ul>
       </header>
