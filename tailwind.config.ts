@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        krem: "#FFF8EE",
+        koyu: "#1E1B2E",
+        turuncu: "#F07B3F",
+        sari: "#F5C842",
+      },
+      fontFamily: {
+        heading: ["var(--font-nunito)", "system-ui", "sans-serif"],
+        body: ["var(--font-rubik)", "system-ui", "sans-serif"],
       },
     },
   },

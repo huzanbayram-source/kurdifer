@@ -1,101 +1,284 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Kategori } from "@/lib/kurmanji";
+import kurmanjiData from "@/data/kurmanji.json";
+import { SesButonu } from "@/components/SesButonu";
+import { IlerlemeBar } from "@/components/IlerlemeBar";
 
-export default function Home() {
+const heroKelimeler = [
+  { ku: "Pisîk", tr: "Kedi", emoji: "🐱" },
+  { ku: "Gur", tr: "Kurt", emoji: "🐺" },
+  { ku: "Masî", tr: "Balık", emoji: "🐟" },
+  { ku: "Hesp", tr: "At", emoji: "🐴" },
+  { ku: "Rovî", tr: "Tilki", emoji: "🦊" },
+];
+
+const kartRenkleri = [
+  "bg-turuncu",
+  "bg-sari",
+  "bg-koyu",
+  "bg-turuncu/80",
+  "bg-sari/90",
+  "bg-koyu/90",
+  "bg-turuncu/70",
+  "bg-sari/80",
+];
+
+export default function HomePage() {
+  const kategoriler = (kurmanjiData.kategoriler as Kategori[]) ?? [];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-krem text-koyu">
+      <Navbar />
+      <Hero />
+      <KategoriGrid kategoriler={kategoriler} />
+      <Footer />
+    </main>
+  );
+}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+function Navbar() {
+  return (
+    <header className="sticky top-0 z-30 border-b border-koyu/10 bg-krem/90 backdrop-blur">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-turuncu text-xl">
+            🌟
+          </span>
+          <span className="font-heading text-2xl font-extrabold tracking-tight">
+            Kurdi<span className="text-turuncu">Fêr</span>
+          </span>
+        </Link>
+
+        <ul className="hidden items-center gap-2 sm:flex">
+          <NavLink href="/dersler">Dersler</NavLink>
+          <NavLink href="/zazaca">Zazaca</NavLink>
+          <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
+          <NavLink href="/videolar">Videolar</NavLink>
+        </ul>
+
+        <Link
+          href="/dersler"
+          className="rounded-full bg-koyu px-4 py-2 font-heading text-sm font-bold text-krem transition hover:bg-turuncu sm:px-5"
+        >
+          Başla
+        </Link>
+      </nav>
+
+      <ul className="flex items-center justify-center gap-1 border-t border-koyu/10 px-4 py-2 sm:hidden">
+        <NavLink href="/dersler">Dersler</NavLink>
+        <NavLink href="/zazaca">Zazaca</NavLink>
+        <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
+        <NavLink href="/videolar">Videolar</NavLink>
+      </ul>
+    </header>
+  );
+}
+
+function NavLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="rounded-full px-3 py-2 font-heading text-sm font-bold text-koyu/80 transition hover:bg-sari/40 hover:text-koyu sm:text-base"
+      >
+        {children}
+      </Link>
+    </li>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="relative overflow-hidden">
+      <div className="mx-auto max-w-6xl px-4 pb-12 pt-10 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div className="text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full bg-sari/40 px-4 py-1.5 font-heading text-sm font-bold text-koyu">
+              <span>🎉</span> Eğlenceli Kürtçe öğrenme platformu
+            </span>
+            <h1 className="mt-5 font-heading text-4xl font-black leading-tight text-balance sm:text-5xl lg:text-6xl">
+              Çocuğun{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-turuncu">Kürtçe</span>
+                <span className="absolute inset-x-0 bottom-1 -z-0 h-3 rounded-full bg-sari/70" />
+              </span>{" "}
+              öğrensin
+            </h1>
+            <p className="mx-auto mt-5 max-w-lg text-base text-koyu/70 sm:text-lg lg:mx-0">
+              Kurmancî kelimeleri, sesli telaffuzları ve renkli görselleriyle
+              4-10 yaş arası çocuklara özel olarak hazırlandı.
+            </p>
+            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <Link
+                href="/dersler"
+                className="w-full rounded-full bg-turuncu px-7 py-3 font-heading font-bold text-krem shadow-lg shadow-turuncu/30 transition hover:-translate-y-0.5 hover:bg-koyu sm:w-auto"
+              >
+                Hemen Başla
+              </Link>
+              <Link
+                href="/oyunlar/eslestirme"
+                className="w-full rounded-full border-2 border-koyu/10 bg-white px-7 py-3 font-heading font-bold text-koyu transition hover:border-turuncu hover:text-turuncu sm:w-auto"
+              >
+                Oyunları Keşfet
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
+            {heroKelimeler.map((k, i) => (
+              <KelimeKart key={k.ku} kelime={k} index={i} />
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+    </section>
+  );
+}
+
+function KelimeKart({
+  kelime,
+  index,
+}: {
+  kelime: { ku: string; tr: string; emoji: string };
+  index: number;
+}) {
+  const renkler = [
+    "bg-turuncu text-krem",
+    "bg-sari text-koyu",
+    "bg-koyu text-krem",
+    "bg-white text-koyu border-2 border-koyu/10",
+    "bg-turuncu/90 text-krem",
+  ];
+  const renk = renkler[index % renkler.length];
+  const buyuk = index === 4;
+
+  return (
+    <div
+      className={`${renk} ${
+        buyuk ? "col-span-2 sm:col-span-1" : ""
+      } group relative flex aspect-square flex-col items-center justify-center gap-2 rounded-3xl p-4 shadow-md transition hover:-translate-y-1 hover:shadow-xl`}
+    >
+      <SesButonu
+        text={kelime.ku}
+        ariaLabel={`${kelime.ku} kelimesini dinle`}
+        className="absolute right-2 top-2 z-10 h-9 w-9 !bg-white !text-koyu sm:right-3 sm:top-3 sm:h-10 sm:w-10"
+      />
+      <span className="text-5xl transition-transform group-hover:scale-110 sm:text-6xl">
+        {kelime.emoji}
+      </span>
+      <div className="text-center">
+        <p className="font-heading text-xl font-extrabold leading-none sm:text-2xl">
+          {kelime.ku}
+        </p>
+        <p className="mt-1 text-xs font-medium opacity-80 sm:text-sm">
+          {kelime.tr}
+        </p>
+      </div>
     </div>
+  );
+}
+
+function KategoriGrid({ kategoriler }: { kategoriler: Kategori[] }) {
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mb-8 flex flex-col items-center text-center sm:mb-12">
+        <h2 className="font-heading text-3xl font-black sm:text-4xl">
+          Kategorileri Keşfet
+        </h2>
+        <p className="mt-3 max-w-md text-koyu/70">
+          Her kategoride onlarca kelime, oyun ve etkinlik seni bekliyor.
+        </p>
+
+        <div
+          role="tablist"
+          aria-label="Lehçe seç"
+          className="mt-6 inline-flex w-full max-w-xs items-center gap-1 rounded-full border-2 border-koyu/10 bg-white p-1 sm:max-w-sm"
+        >
+          <span
+            role="tab"
+            aria-selected="true"
+            aria-current="page"
+            className="flex-1 rounded-full bg-turuncu px-4 py-2 text-center font-heading text-sm font-bold text-krem shadow-sm sm:text-base"
+          >
+            Kurmancî
+          </span>
+          <Link
+            role="tab"
+            aria-selected="false"
+            href="/zazaca"
+            className="flex-1 rounded-full px-4 py-2 text-center font-heading text-sm font-bold text-koyu/70 transition hover:text-koyu sm:text-base"
+          >
+            Zazaca
+          </Link>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+        {kategoriler.map((kat, i) => (
+          <KategoriKart
+            key={kat.id}
+            kategori={kat}
+            renkClass={kartRenkleri[i % kartRenkleri.length]}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function KategoriKart({
+  kategori,
+  renkClass,
+}: {
+  kategori: Kategori;
+  renkClass: string;
+}) {
+  const koyuKart = renkClass.startsWith("bg-koyu");
+  const textColor = koyuKart ? "text-krem" : "text-koyu";
+  const altText = koyuKart ? "text-krem/70" : "text-koyu/70";
+
+  return (
+    <Link
+      href={`/kurmanji/${kategori.id}`}
+      className={`${renkClass} ${textColor} group relative flex flex-col justify-between overflow-hidden rounded-3xl p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl sm:p-6`}
+    >
+      <span className="text-4xl transition-transform group-hover:scale-110 sm:text-5xl">
+        {kategori.emoji}
+      </span>
+      <div className="mt-6">
+        <p className="font-heading text-xl font-extrabold sm:text-2xl">
+          {kategori.tr}
+        </p>
+        <p className={`mt-0.5 text-sm font-medium ${altText}`}>
+          {kategori.ku} · {kategori.kelimeler.length} kelime
+        </p>
+        <IlerlemeBar
+          dil="kurmanji"
+          kategoriId={kategori.id}
+          koyuKart={koyuKart}
+        />
+      </div>
+      <span className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/10 transition group-hover:scale-150" />
+    </Link>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-koyu/10 bg-krem">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-koyu/60 sm:flex-row sm:px-6 lg:px-8">
+        <p>
+          © {new Date().getFullYear()}{" "}
+          <span className="font-heading font-bold text-koyu">KurdiFêr</span>
+        </p>
+        <p>Bi hezkirinê hatiye çêkirin · Sevgiyle yapıldı</p>
+      </div>
+    </footer>
   );
 }

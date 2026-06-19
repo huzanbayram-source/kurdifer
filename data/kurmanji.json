@@ -1,0 +1,1740 @@
+{
+  "meta": {
+    "dil": "kurmanji",
+    "versiyon": "1.1",
+    "guncelleme": "2026-06-19"
+  },
+  "kategoriler": [
+    {
+      "id": "hayvanlar",
+      "tr": "Hayvanlar",
+      "ku": "Ajal",
+      "en": "Animals",
+      "emoji": "🐾",
+      "seviye": "kolay",
+      "kelimeler": [
+        {
+          "id": "kedi",
+          "ku": "Pisîk",
+          "tr": "Kedi",
+          "en": "Cat",
+          "telaffuz": "pee-seek",
+          "ses": "/audio/ku/pisik.mp3",
+          "gorsel": "/images/hayvanlar/kedi.png",
+          "ornek_cumle": {
+            "ku": "Pisîka min spî ye.",
+            "tr": "Benim kedim beyaz."
+          }
+        },
+        {
+          "id": "kopek",
+          "ku": "Kûçik",
+          "tr": "Köpek",
+          "en": "Dog",
+          "telaffuz": "koo-chik",
+          "ses": "/audio/ku/kucik.mp3",
+          "gorsel": "/images/hayvanlar/kopek.png",
+          "ornek_cumle": {
+            "ku": "Kûçikê min mezin e.",
+            "tr": "Benim köpeğim büyük."
+          }
+        },
+        {
+          "id": "at",
+          "ku": "Hesp",
+          "tr": "At",
+          "en": "Horse",
+          "telaffuz": "hesp",
+          "ses": "/audio/ku/hesp.mp3",
+          "gorsel": "/images/hayvanlar/at.png",
+          "ornek_cumle": {
+            "ku": "Hesp bi lez dide.",
+            "tr": "At hızlı koşar."
+          }
+        },
+        {
+          "id": "inek",
+          "ku": "Mange",
+          "tr": "İnek",
+          "en": "Cow",
+          "telaffuz": "man-geh",
+          "ses": "/audio/ku/mange.mp3",
+          "gorsel": "/images/hayvanlar/inek.png",
+          "ornek_cumle": {
+            "ku": "Mange şîr dide.",
+            "tr": "İnek süt verir."
+          }
+        },
+        {
+          "id": "goyun",
+          "ku": "Mî",
+          "tr": "Koyun",
+          "en": "Sheep",
+          "telaffuz": "mee",
+          "ses": "/audio/ku/mi.mp3",
+          "gorsel": "/images/hayvanlar/koyun.png",
+          "ornek_cumle": {
+            "ku": "Mî li çîyê ye.",
+            "tr": "Koyun dağdadır."
+          }
+        },
+        {
+          "id": "keci",
+          "ku": "Bizin",
+          "tr": "Keçi",
+          "en": "Goat",
+          "telaffuz": "bee-zin",
+          "ses": "/audio/ku/bizin.mp3",
+          "gorsel": "/images/hayvanlar/keci.png",
+          "ornek_cumle": {
+            "ku": "Bizin li nav çîyê ye.",
+            "tr": "Keçi dağın içindedir."
+          }
+        },
+        {
+          "id": "tavuk",
+          "ku": "Mirîşk",
+          "tr": "Tavuk",
+          "en": "Chicken",
+          "telaffuz": "mee-rishk",
+          "ses": "/audio/ku/mirishk.mp3",
+          "gorsel": "/images/hayvanlar/tavuk.png",
+          "ornek_cumle": {
+            "ku": "Mirîşk hêk dide.",
+            "tr": "Tavuk yumurta verir."
+          }
+        },
+        {
+          "id": "horoz",
+          "ku": "Dîk",
+          "tr": "Horoz",
+          "en": "Rooster",
+          "telaffuz": "deek",
+          "ses": "/audio/ku/dik.mp3",
+          "gorsel": "/images/hayvanlar/horoz.png",
+          "ornek_cumle": {
+            "ku": "Dîk sibehê diqîre.",
+            "tr": "Horoz sabah öter."
+          }
+        },
+        {
+          "id": "esek",
+          "ku": "Ker",
+          "tr": "Eşek",
+          "en": "Donkey",
+          "telaffuz": "kehr",
+          "ses": "/audio/ku/ker.mp3",
+          "gorsel": "/images/hayvanlar/esek.png",
+          "ornek_cumle": {
+            "ku": "Ker bar hildide.",
+            "tr": "Eşek yük taşır."
+          }
+        },
+        {
+          "id": "kurt",
+          "ku": "Gur",
+          "tr": "Kurt",
+          "en": "Wolf",
+          "telaffuz": "goor",
+          "ses": "/audio/ku/gur.mp3",
+          "gorsel": "/images/hayvanlar/kurt.png",
+          "ornek_cumle": {
+            "ku": "Gur li daristanê dijî.",
+            "tr": "Kurt ormanda yaşar."
+          }
+        },
+        {
+          "id": "rovsî",
+          "ku": "Rovî",
+          "tr": "Tilki",
+          "en": "Fox",
+          "telaffuz": "ro-vee",
+          "ses": "/audio/ku/rovi.mp3",
+          "gorsel": "/images/hayvanlar/tilki.png",
+          "ornek_cumle": {
+            "ku": "Rovî zîrek e.",
+            "tr": "Tilki zekidir."
+          }
+        },
+        {
+          "id": "xers",
+          "ku": "Xers",
+          "tr": "Ayı",
+          "en": "Bear",
+          "telaffuz": "khers",
+          "ses": "/audio/ku/xers.mp3",
+          "gorsel": "/images/hayvanlar/ayi.png",
+          "ornek_cumle": {
+            "ku": "Xers mezin e.",
+            "tr": "Ayı büyüktür."
+          }
+        },
+        {
+          "id": "mar",
+          "ku": "Mar",
+          "tr": "Yılan",
+          "en": "Snake",
+          "telaffuz": "mar",
+          "ses": "/audio/ku/mar.mp3",
+          "gorsel": "/images/hayvanlar/yilan.png",
+          "ornek_cumle": {
+            "ku": "Mar dirêj e.",
+            "tr": "Yılan uzundur."
+          }
+        },
+        {
+          "id": "masî",
+          "ku": "Masî",
+          "tr": "Balık",
+          "en": "Fish",
+          "telaffuz": "ma-see",
+          "ses": "/audio/ku/masi.mp3",
+          "gorsel": "/images/hayvanlar/balik.png",
+          "ornek_cumle": {
+            "ku": "Masî di avê de ye.",
+            "tr": "Balık suyun içindedir."
+          }
+        },
+        {
+          "id": "çûçik",
+          "ku": "Çûçik",
+          "tr": "Kuş",
+          "en": "Bird",
+          "telaffuz": "choo-chik",
+          "ses": "/audio/ku/cucik.mp3",
+          "gorsel": "/images/hayvanlar/kus.png",
+          "ornek_cumle": {
+            "ku": "Çûçik difure.",
+            "tr": "Kuş uçar."
+          }
+        },
+        {
+          "id": "kêzik",
+          "ku": "Kêzik",
+          "tr": "Böcek",
+          "en": "Insect",
+          "telaffuz": "keh-zik",
+          "ses": "/audio/ku/kezik.mp3",
+          "gorsel": "/images/hayvanlar/bocek.png",
+          "ornek_cumle": {
+            "ku": "Kêzik piçûk e.",
+            "tr": "Böcek küçüktür."
+          }
+        },
+        {
+          "id": "hespê_avê",
+          "ku": "Beq",
+          "tr": "Kurbağa",
+          "en": "Frog",
+          "telaffuz": "bek",
+          "ses": "/audio/ku/beq.mp3",
+          "gorsel": "/images/hayvanlar/kurbaga.png",
+          "ornek_cumle": {
+            "ku": "Beq li kêlekê avê ye.",
+            "tr": "Kurbağa suyun kenarındadır."
+          }
+        },
+        {
+          "id": "mişk",
+          "ku": "Mişk",
+          "tr": "Fare",
+          "en": "Mouse",
+          "telaffuz": "mishk",
+          "ses": "/audio/ku/misk.mp3",
+          "gorsel": "/images/hayvanlar/fare.png",
+          "ornek_cumle": {
+            "ku": "Mişk piçûk e.",
+            "tr": "Fare küçüktür."
+          }
+        },
+        {
+          "id": "kêvroşk",
+          "ku": "Kêvroşk",
+          "tr": "Tavşan",
+          "en": "Rabbit",
+          "telaffuz": "kev-roshk",
+          "ses": "/audio/ku/kevroshk.mp3",
+          "gorsel": "/images/hayvanlar/tavsan.png",
+          "ornek_cumle": {
+            "ku": "Kêvroşk spî ye.",
+            "tr": "Tavşan beyazdır."
+          }
+        },
+        {
+          "id": "hirç",
+          "ku": "Hirç",
+          "tr": "Kirpi",
+          "en": "Hedgehog",
+          "telaffuz": "hirch",
+          "ses": "/audio/ku/hirc.mp3",
+          "gorsel": "/images/hayvanlar/kirpi.png",
+          "ornek_cumle": {
+            "ku": "Hirç bi diran e.",
+            "tr": "Kirpinin dikenleri var."
+          }
+        }
+      ]
+    },
+    {
+      "id": "renkler",
+      "tr": "Renkler",
+      "ku": "Reng",
+      "en": "Colors",
+      "emoji": "🎨",
+      "seviye": "kolay",
+      "kelimeler": [
+        {
+          "id": "kirmizi",
+          "ku": "Sor",
+          "tr": "Kırmızı",
+          "en": "Red",
+          "telaffuz": "sor",
+          "ses": "/audio/ku/sor.mp3",
+          "gorsel": "/images/renkler/kirmizi.png",
+          "ornek_cumle": {
+            "ku": "Sêv sor e.",
+            "tr": "Elma kırmızıdır."
+          }
+        },
+        {
+          "id": "mavi",
+          "ku": "Şîn",
+          "tr": "Mavi",
+          "en": "Blue",
+          "telaffuz": "sheen",
+          "ses": "/audio/ku/sin.mp3",
+          "gorsel": "/images/renkler/mavi.png",
+          "ornek_cumle": {
+            "ku": "Ezman şîn e.",
+            "tr": "Gökyüzü mavidir."
+          }
+        },
+        {
+          "id": "sari",
+          "ku": "Zer",
+          "tr": "Sarı",
+          "en": "Yellow",
+          "telaffuz": "zer",
+          "ses": "/audio/ku/zer.mp3",
+          "gorsel": "/images/renkler/sari.png",
+          "ornek_cumle": {
+            "ku": "Roj zer e.",
+            "tr": "Güneş sarıdır."
+          }
+        },
+        {
+          "id": "yesil",
+          "ku": "Kesk",
+          "tr": "Yeşil",
+          "en": "Green",
+          "telaffuz": "kesk",
+          "ses": "/audio/ku/kesk.mp3",
+          "gorsel": "/images/renkler/yesil.png",
+          "ornek_cumle": {
+            "ku": "Pel kesk in.",
+            "tr": "Yapraklar yeşildir."
+          }
+        },
+        {
+          "id": "beyaz",
+          "ku": "Spî",
+          "tr": "Beyaz",
+          "en": "White",
+          "telaffuz": "spee",
+          "ses": "/audio/ku/spi.mp3",
+          "gorsel": "/images/renkler/beyaz.png",
+          "ornek_cumle": {
+            "ku": "Berf spî ye.",
+            "tr": "Kar beyazdır."
+          }
+        },
+        {
+          "id": "siyah",
+          "ku": "Reş",
+          "tr": "Siyah",
+          "en": "Black",
+          "telaffuz": "resh",
+          "ses": "/audio/ku/res.mp3",
+          "gorsel": "/images/renkler/siyah.png",
+          "ornek_cumle": {
+            "ku": "Şev reş e.",
+            "tr": "Gece siyahtır."
+          }
+        },
+        {
+          "id": "turuncu",
+          "ku": "Pirteqalî",
+          "tr": "Turuncu",
+          "en": "Orange",
+          "telaffuz": "pir-te-qa-lee",
+          "ses": "/audio/ku/pirteqali.mp3",
+          "gorsel": "/images/renkler/turuncu.png",
+          "ornek_cumle": {
+            "ku": "Pirteqal pirteqalî ye.",
+            "tr": "Portakal turuncudur."
+          }
+        },
+        {
+          "id": "mor",
+          "ku": "Mor",
+          "tr": "Mor",
+          "en": "Purple",
+          "telaffuz": "mor",
+          "ses": "/audio/ku/mor.mp3",
+          "gorsel": "/images/renkler/mor.png",
+          "ornek_cumle": {
+            "ku": "Gul mor in.",
+            "tr": "Güller mordur."
+          }
+        },
+        {
+          "id": "pembe",
+          "ku": "Pembe",
+          "tr": "Pembe",
+          "en": "Pink",
+          "telaffuz": "pem-beh",
+          "ses": "/audio/ku/pembe.mp3",
+          "gorsel": "/images/renkler/pembe.png",
+          "ornek_cumle": {
+            "ku": "Kulîlk pembe ye.",
+            "tr": "Çiçek pembedir."
+          }
+        },
+        {
+          "id": "kahverengi",
+          "ku": "Qehweyî",
+          "tr": "Kahverengi",
+          "en": "Brown",
+          "telaffuz": "qeh-we-yee",
+          "ses": "/audio/ku/qehweyi.mp3",
+          "gorsel": "/images/renkler/kahverengi.png",
+          "ornek_cumle": {
+            "ku": "Dar qehweyî ye.",
+            "tr": "Ağaç kahverengidir."
+          }
+        },
+        {
+          "id": "gri",
+          "ku": "Gewr",
+          "tr": "Gri",
+          "en": "Gray",
+          "telaffuz": "gewr",
+          "ses": "/audio/ku/gewr.mp3",
+          "gorsel": "/images/renkler/gri.png",
+          "ornek_cumle": {
+            "ku": "Ewr gewr e.",
+            "tr": "Bulut gridir."
+          }
+        },
+        {
+          "id": "gumus",
+          "ku": "Zîvîn",
+          "tr": "Gümüş",
+          "en": "Silver",
+          "telaffuz": "zee-veen",
+          "ses": "/audio/ku/zivin.mp3",
+          "gorsel": "/images/renkler/gumus.png",
+          "ornek_cumle": {
+            "ku": "Hîv zîvîn e.",
+            "tr": "Ay gümüş rengindedir."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sayilar",
+      "tr": "Sayılar",
+      "ku": "Hejmar",
+      "en": "Numbers",
+      "emoji": "🔢",
+      "seviye": "kolay",
+      "kelimeler": [
+        {
+          "id": "bir",
+          "ku": "Yek",
+          "tr": "Bir",
+          "en": "One",
+          "telaffuz": "yek",
+          "ses": "/audio/ku/yek.mp3",
+          "gorsel": "/images/sayilar/bir.png",
+          "ornek_cumle": {
+            "ku": "Min yek sêv heye.",
+            "tr": "Bir elmam var."
+          }
+        },
+        {
+          "id": "iki",
+          "ku": "Du",
+          "tr": "İki",
+          "en": "Two",
+          "telaffuz": "doo",
+          "ses": "/audio/ku/du.mp3",
+          "gorsel": "/images/sayilar/iki.png",
+          "ornek_cumle": {
+            "ku": "Du çûçik difirin.",
+            "tr": "İki kuş uçuyor."
+          }
+        },
+        {
+          "id": "uc",
+          "ku": "Sê",
+          "tr": "Üç",
+          "en": "Three",
+          "telaffuz": "say",
+          "ses": "/audio/ku/se.mp3",
+          "gorsel": "/images/sayilar/uc.png",
+          "ornek_cumle": {
+            "ku": "Sê pisîk hene.",
+            "tr": "Üç kedi var."
+          }
+        },
+        {
+          "id": "dort",
+          "ku": "Çar",
+          "tr": "Dört",
+          "en": "Four",
+          "telaffuz": "char",
+          "ses": "/audio/ku/car.mp3",
+          "gorsel": "/images/sayilar/dort.png",
+          "ornek_cumle": {
+            "ku": "Çar kursî hene.",
+            "tr": "Dört sandalye var."
+          }
+        },
+        {
+          "id": "bes",
+          "ku": "Pênc",
+          "tr": "Beş",
+          "en": "Five",
+          "telaffuz": "pench",
+          "ses": "/audio/ku/penc.mp3",
+          "gorsel": "/images/sayilar/bes.png",
+          "ornek_cumle": {
+            "ku": "Pênc tilî hene.",
+            "tr": "Beş parmak var."
+          }
+        },
+        {
+          "id": "alti",
+          "ku": "Şeş",
+          "tr": "Altı",
+          "en": "Six",
+          "telaffuz": "shesh",
+          "ses": "/audio/ku/ses.mp3",
+          "gorsel": "/images/sayilar/alti.png",
+          "ornek_cumle": {
+            "ku": "Şeş roj derbas bûn.",
+            "tr": "Altı gün geçti."
+          }
+        },
+        {
+          "id": "yedi",
+          "ku": "Heft",
+          "tr": "Yedi",
+          "en": "Seven",
+          "telaffuz": "heft",
+          "ses": "/audio/ku/heft.mp3",
+          "gorsel": "/images/sayilar/yedi.png",
+          "ornek_cumle": {
+            "ku": "Heftê heft roj hene.",
+            "tr": "Bir haftada yedi gün var."
+          }
+        },
+        {
+          "id": "sekiz",
+          "ku": "Heşt",
+          "tr": "Sekiz",
+          "en": "Eight",
+          "telaffuz": "hesht",
+          "ses": "/audio/ku/hest.mp3",
+          "gorsel": "/images/sayilar/sekiz.png",
+          "ornek_cumle": {
+            "ku": "Heşt kelîme bixwîne.",
+            "tr": "Sekiz kelime oku."
+          }
+        },
+        {
+          "id": "dokuz",
+          "ku": "Neh",
+          "tr": "Dokuz",
+          "en": "Nine",
+          "telaffuz": "neh",
+          "ses": "/audio/ku/neh.mp3",
+          "gorsel": "/images/sayilar/dokuz.png",
+          "ornek_cumle": {
+            "ku": "Neh kêzik di nav baxçe de ne.",
+            "tr": "Bahçede dokuz böcek var."
+          }
+        },
+        {
+          "id": "on",
+          "ku": "Deh",
+          "tr": "On",
+          "en": "Ten",
+          "telaffuz": "deh",
+          "ses": "/audio/ku/deh.mp3",
+          "gorsel": "/images/sayilar/on.png",
+          "ornek_cumle": {
+            "ku": "Deh tilî hene.",
+            "tr": "On parmak var."
+          }
+        },
+        {
+          "id": "onbir",
+          "ku": "Yazdeh",
+          "tr": "On bir",
+          "en": "Eleven",
+          "telaffuz": "yaz-deh",
+          "ses": "/audio/ku/yazdeh.mp3",
+          "gorsel": "/images/sayilar/onbir.png",
+          "ornek_cumle": {
+            "ku": "Yazdeh stêrk dibiriqin.",
+            "tr": "On bir yıldız parlıyor."
+          }
+        },
+        {
+          "id": "oniki",
+          "ku": "Diwazdeh",
+          "tr": "On iki",
+          "en": "Twelve",
+          "telaffuz": "dee-waz-deh",
+          "ses": "/audio/ku/diwazdeh.mp3",
+          "gorsel": "/images/sayilar/oniki.png",
+          "ornek_cumle": {
+            "ku": "Diwazdeh meh hene.",
+            "tr": "On iki ay var."
+          }
+        },
+        {
+          "id": "onuc",
+          "ku": "Sêzdeh",
+          "tr": "On üç",
+          "en": "Thirteen",
+          "telaffuz": "sayz-deh",
+          "ses": "/audio/ku/sezdeh.mp3",
+          "gorsel": "/images/sayilar/onuc.png",
+          "ornek_cumle": {
+            "ku": "Sêzdeh sêv li ser mase ne.",
+            "tr": "Masada on üç elma var."
+          }
+        },
+        {
+          "id": "ondort",
+          "ku": "Çardeh",
+          "tr": "On dört",
+          "en": "Fourteen",
+          "telaffuz": "char-deh",
+          "ses": "/audio/ku/cardeh.mp3",
+          "gorsel": "/images/sayilar/ondort.png",
+          "ornek_cumle": {
+            "ku": "Çardeh roj derbas bûn.",
+            "tr": "On dört gün geçti."
+          }
+        },
+        {
+          "id": "onbes",
+          "ku": "Pazdeh",
+          "tr": "On beş",
+          "en": "Fifteen",
+          "telaffuz": "paz-deh",
+          "ses": "/audio/ku/pazdeh.mp3",
+          "gorsel": "/images/sayilar/onbes.png",
+          "ornek_cumle": {
+            "ku": "Pazdeh zarok dilîzin.",
+            "tr": "On beş çocuk oynuyor."
+          }
+        },
+        {
+          "id": "onalti",
+          "ku": "Şanzdeh",
+          "tr": "On altı",
+          "en": "Sixteen",
+          "telaffuz": "shanz-deh",
+          "ses": "/audio/ku/sanzdeh.mp3",
+          "gorsel": "/images/sayilar/onalti.png",
+          "ornek_cumle": {
+            "ku": "Şanzdeh stêrk dibînim.",
+            "tr": "On altı yıldız görüyorum."
+          }
+        },
+        {
+          "id": "onyedi",
+          "ku": "Hevdeh",
+          "tr": "On yedi",
+          "en": "Seventeen",
+          "telaffuz": "hev-deh",
+          "ses": "/audio/ku/hevdeh.mp3",
+          "gorsel": "/images/sayilar/onyedi.png",
+          "ornek_cumle": {
+            "ku": "Hevdeh kêzik hene.",
+            "tr": "On yedi böcek var."
+          }
+        },
+        {
+          "id": "onsekiz",
+          "ku": "Hejdeh",
+          "tr": "On sekiz",
+          "en": "Eighteen",
+          "telaffuz": "hej-deh",
+          "ses": "/audio/ku/hejdeh.mp3",
+          "gorsel": "/images/sayilar/onsekiz.png",
+          "ornek_cumle": {
+            "ku": "Bira on sekîz salî ye.",
+            "tr": "Ağabey on sekiz yaşında."
+          }
+        },
+        {
+          "id": "ondokuz",
+          "ku": "Nozdeh",
+          "tr": "On dokuz",
+          "en": "Nineteen",
+          "telaffuz": "noz-deh",
+          "ses": "/audio/ku/nozdeh.mp3",
+          "gorsel": "/images/sayilar/ondokuz.png",
+          "ornek_cumle": {
+            "ku": "Nozdeh dar li daristanê hene.",
+            "tr": "Ormanda on dokuz ağaç var."
+          }
+        },
+        {
+          "id": "yirmi",
+          "ku": "Bîst",
+          "tr": "Yirmi",
+          "en": "Twenty",
+          "telaffuz": "beest",
+          "ses": "/audio/ku/bist.mp3",
+          "gorsel": "/images/sayilar/yirmi.png",
+          "ornek_cumle": {
+            "ku": "Bîst tilî, bîst kêf.",
+            "tr": "Yirmi parmak, yirmi neşe."
+          }
+        }
+      ]
+    },
+    {
+      "id": "meyveler",
+      "tr": "Meyveler",
+      "ku": "Fêkî",
+      "en": "Fruits",
+      "emoji": "🍎",
+      "seviye": "kolay",
+      "kelimeler": [
+        {
+          "id": "elma",
+          "ku": "Sêv",
+          "tr": "Elma",
+          "en": "Apple",
+          "telaffuz": "sayv",
+          "ses": "/audio/ku/sev.mp3",
+          "gorsel": "/images/meyveler/elma.png",
+          "ornek_cumle": {
+            "ku": "Sêv sor û şîrîn e.",
+            "tr": "Elma kırmızı ve tatlıdır."
+          }
+        },
+        {
+          "id": "muz",
+          "ku": "Mûz",
+          "tr": "Muz",
+          "en": "Banana",
+          "telaffuz": "mooz",
+          "ses": "/audio/ku/muz.mp3",
+          "gorsel": "/images/meyveler/muz.png",
+          "ornek_cumle": {
+            "ku": "Mûz zer e.",
+            "tr": "Muz sarıdır."
+          }
+        },
+        {
+          "id": "uzum",
+          "ku": "Tirî",
+          "tr": "Üzüm",
+          "en": "Grape",
+          "telaffuz": "ti-ree",
+          "ses": "/audio/ku/tiri.mp3",
+          "gorsel": "/images/meyveler/uzum.png",
+          "ornek_cumle": {
+            "ku": "Tirî şîrîn e.",
+            "tr": "Üzüm tatlıdır."
+          }
+        },
+        {
+          "id": "armut",
+          "ku": "Hirmî",
+          "tr": "Armut",
+          "en": "Pear",
+          "telaffuz": "hir-mee",
+          "ses": "/audio/ku/hirmi.mp3",
+          "gorsel": "/images/meyveler/armut.png",
+          "ornek_cumle": {
+            "ku": "Hirmî şîrîn e.",
+            "tr": "Armut tatlıdır."
+          }
+        },
+        {
+          "id": "nar",
+          "ku": "Hinar",
+          "tr": "Nar",
+          "en": "Pomegranate",
+          "telaffuz": "hi-nar",
+          "ses": "/audio/ku/hinar.mp3",
+          "gorsel": "/images/meyveler/nar.png",
+          "ornek_cumle": {
+            "ku": "Hinar sor e.",
+            "tr": "Nar kırmızıdır."
+          }
+        },
+        {
+          "id": "portakal",
+          "ku": "Pirteqal",
+          "tr": "Portakal",
+          "en": "Orange",
+          "telaffuz": "pir-te-qal",
+          "ses": "/audio/ku/pirteqal.mp3",
+          "gorsel": "/images/meyveler/portakal.png",
+          "ornek_cumle": {
+            "ku": "Pirteqal pir bi vîtamîn e.",
+            "tr": "Portakal vitamin doludur."
+          }
+        },
+        {
+          "id": "limon",
+          "ku": "Lîmon",
+          "tr": "Limon",
+          "en": "Lemon",
+          "telaffuz": "lee-mon",
+          "ses": "/audio/ku/limon.mp3",
+          "gorsel": "/images/meyveler/limon.png",
+          "ornek_cumle": {
+            "ku": "Lîmon tirş e.",
+            "tr": "Limon ekşidir."
+          }
+        },
+        {
+          "id": "kiraz",
+          "ku": "Gêlas",
+          "tr": "Kiraz",
+          "en": "Cherry",
+          "telaffuz": "gay-las",
+          "ses": "/audio/ku/gelas.mp3",
+          "gorsel": "/images/meyveler/kiraz.png",
+          "ornek_cumle": {
+            "ku": "Gêlas sor in.",
+            "tr": "Kirazlar kırmızıdır."
+          }
+        },
+        {
+          "id": "seftali",
+          "ku": "Xox",
+          "tr": "Şeftali",
+          "en": "Peach",
+          "telaffuz": "khokh",
+          "ses": "/audio/ku/xox.mp3",
+          "gorsel": "/images/meyveler/seftali.png",
+          "ornek_cumle": {
+            "ku": "Xox şîrîn e.",
+            "tr": "Şeftali tatlıdır."
+          }
+        },
+        {
+          "id": "karpuz",
+          "ku": "Zebeş",
+          "tr": "Karpuz",
+          "en": "Watermelon",
+          "telaffuz": "ze-besh",
+          "ses": "/audio/ku/zebes.mp3",
+          "gorsel": "/images/meyveler/karpuz.png",
+          "ornek_cumle": {
+            "ku": "Zebeş havînê tê xwarin.",
+            "tr": "Karpuz yazın yenir."
+          }
+        },
+        {
+          "id": "kavun",
+          "ku": "Petêx",
+          "tr": "Kavun",
+          "en": "Melon",
+          "telaffuz": "pe-tekh",
+          "ses": "/audio/ku/petex.mp3",
+          "gorsel": "/images/meyveler/kavun.png",
+          "ornek_cumle": {
+            "ku": "Petêx zer e.",
+            "tr": "Kavun sarıdır."
+          }
+        },
+        {
+          "id": "dut",
+          "ku": "Tû",
+          "tr": "Dut",
+          "en": "Mulberry",
+          "telaffuz": "too",
+          "ses": "/audio/ku/tu.mp3",
+          "gorsel": "/images/meyveler/dut.png",
+          "ornek_cumle": {
+            "ku": "Tû li ser daran dibe.",
+            "tr": "Dut ağaçlarda olur."
+          }
+        },
+        {
+          "id": "kayisi",
+          "ku": "Zerdelû",
+          "tr": "Kayısı",
+          "en": "Apricot",
+          "telaffuz": "zer-de-loo",
+          "ses": "/audio/ku/zerdelu.mp3",
+          "gorsel": "/images/meyveler/kayisi.png",
+          "ornek_cumle": {
+            "ku": "Zerdelû zer e.",
+            "tr": "Kayısı sarıdır."
+          }
+        },
+        {
+          "id": "cilek",
+          "ku": "Tûtfirengî",
+          "tr": "Çilek",
+          "en": "Strawberry",
+          "telaffuz": "toot-fi-ren-gee",
+          "ses": "/audio/ku/tutfirengi.mp3",
+          "gorsel": "/images/meyveler/cilek.png",
+          "ornek_cumle": {
+            "ku": "Tûtfirengî pir xweş e.",
+            "tr": "Çilek çok güzeldir."
+          }
+        },
+        {
+          "id": "incir",
+          "ku": "Hejîr",
+          "tr": "İncir",
+          "en": "Fig",
+          "telaffuz": "he-jeer",
+          "ses": "/audio/ku/hejir.mp3",
+          "gorsel": "/images/meyveler/incir.png",
+          "ornek_cumle": {
+            "ku": "Hejîr di havînê de tê xwarin.",
+            "tr": "İncir yazın yenir."
+          }
+        }
+      ]
+    },
+    {
+      "id": "aile",
+      "tr": "Aile",
+      "ku": "Malbat",
+      "en": "Family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "seviye": "kolay",
+      "kelimeler": [
+        {
+          "id": "anne",
+          "ku": "Dayik",
+          "tr": "Anne",
+          "en": "Mother",
+          "telaffuz": "da-yik",
+          "ses": "/audio/ku/dayik.mp3",
+          "gorsel": "/images/aile/anne.png",
+          "ornek_cumle": {
+            "ku": "Dayika min delal e.",
+            "tr": "Annem güzeldir."
+          }
+        },
+        {
+          "id": "baba",
+          "ku": "Bav",
+          "tr": "Baba",
+          "en": "Father",
+          "telaffuz": "bav",
+          "ses": "/audio/ku/bav.mp3",
+          "gorsel": "/images/aile/baba.png",
+          "ornek_cumle": {
+            "ku": "Bavê min mamoste ye.",
+            "tr": "Babam öğretmendir."
+          }
+        },
+        {
+          "id": "agabey",
+          "ku": "Bira",
+          "tr": "Erkek kardeş",
+          "en": "Brother",
+          "telaffuz": "bi-ra",
+          "ses": "/audio/ku/bira.mp3",
+          "gorsel": "/images/aile/agabey.png",
+          "ornek_cumle": {
+            "ku": "Birayê min ji min mezintir e.",
+            "tr": "Ağabeyim benden büyüktür."
+          }
+        },
+        {
+          "id": "ablakizkardes",
+          "ku": "Xwişk",
+          "tr": "Kız kardeş",
+          "en": "Sister",
+          "telaffuz": "khwishk",
+          "ses": "/audio/ku/xwisk.mp3",
+          "gorsel": "/images/aile/kizkardes.png",
+          "ornek_cumle": {
+            "ku": "Xwişka min biçûk e.",
+            "tr": "Kız kardeşim küçüktür."
+          }
+        },
+        {
+          "id": "babaanne",
+          "ku": "Dapîr",
+          "tr": "Babaanne",
+          "en": "Grandmother",
+          "telaffuz": "da-peer",
+          "ses": "/audio/ku/dapir.mp3",
+          "gorsel": "/images/aile/babaanne.png",
+          "ornek_cumle": {
+            "ku": "Dapîra min çîrokan dibêje.",
+            "tr": "Babaannem hikayeler anlatır."
+          }
+        },
+        {
+          "id": "dede",
+          "ku": "Bapîr",
+          "tr": "Dede",
+          "en": "Grandfather",
+          "telaffuz": "ba-peer",
+          "ses": "/audio/ku/bapir.mp3",
+          "gorsel": "/images/aile/dede.png",
+          "ornek_cumle": {
+            "ku": "Bapîrê min mêvanperwer e.",
+            "tr": "Dedem misafirperverdir."
+          }
+        },
+        {
+          "id": "amca",
+          "ku": "Ap",
+          "tr": "Amca",
+          "en": "Uncle (paternal)",
+          "telaffuz": "ap",
+          "ses": "/audio/ku/ap.mp3",
+          "gorsel": "/images/aile/amca.png",
+          "ornek_cumle": {
+            "ku": "Apê min li bajêr dijî.",
+            "tr": "Amcam şehirde yaşar."
+          }
+        },
+        {
+          "id": "hala",
+          "ku": "Met",
+          "tr": "Hala",
+          "en": "Aunt (paternal)",
+          "telaffuz": "met",
+          "ses": "/audio/ku/met.mp3",
+          "gorsel": "/images/aile/hala.png",
+          "ornek_cumle": {
+            "ku": "Meta min mêvanperwer e.",
+            "tr": "Halam misafirperverdir."
+          }
+        },
+        {
+          "id": "dayi",
+          "ku": "Xal",
+          "tr": "Dayı",
+          "en": "Uncle (maternal)",
+          "telaffuz": "khal",
+          "ses": "/audio/ku/xal.mp3",
+          "gorsel": "/images/aile/dayi.png",
+          "ornek_cumle": {
+            "ku": "Xalê min ji min mezintir e.",
+            "tr": "Dayım benden büyüktür."
+          }
+        },
+        {
+          "id": "teyze",
+          "ku": "Xaltî",
+          "tr": "Teyze",
+          "en": "Aunt (maternal)",
+          "telaffuz": "khal-tee",
+          "ses": "/audio/ku/xalti.mp3",
+          "gorsel": "/images/aile/teyze.png",
+          "ornek_cumle": {
+            "ku": "Xaltiya min delal e.",
+            "tr": "Teyzem sevimlidir."
+          }
+        },
+        {
+          "id": "kuzenerkek",
+          "ku": "Pismam",
+          "tr": "Kuzen (erkek)",
+          "en": "Cousin (male)",
+          "telaffuz": "pis-mam",
+          "ses": "/audio/ku/pismam.mp3",
+          "gorsel": "/images/aile/kuzenerkek.png",
+          "ornek_cumle": {
+            "ku": "Pismamê min hevalê min e.",
+            "tr": "Kuzenim arkadaşımdır."
+          }
+        },
+        {
+          "id": "kuzenkiz",
+          "ku": "Dotmam",
+          "tr": "Kuzen (kız)",
+          "en": "Cousin (female)",
+          "telaffuz": "dot-mam",
+          "ses": "/audio/ku/dotmam.mp3",
+          "gorsel": "/images/aile/kuzenkiz.png",
+          "ornek_cumle": {
+            "ku": "Dotmama min dibistanê dixwîne.",
+            "tr": "Kuzenim okula gidiyor."
+          }
+        },
+        {
+          "id": "cocuk",
+          "ku": "Zarok",
+          "tr": "Çocuk",
+          "en": "Child",
+          "telaffuz": "za-rok",
+          "ses": "/audio/ku/zarok.mp3",
+          "gorsel": "/images/aile/cocuk.png",
+          "ornek_cumle": {
+            "ku": "Zarok dilîzin.",
+            "tr": "Çocuklar oynuyor."
+          }
+        },
+        {
+          "id": "ogul",
+          "ku": "Kur",
+          "tr": "Oğul",
+          "en": "Son",
+          "telaffuz": "kur",
+          "ses": "/audio/ku/kur.mp3",
+          "gorsel": "/images/aile/ogul.png",
+          "ornek_cumle": {
+            "ku": "Kurê wan bi sê salî ye.",
+            "tr": "Oğulları üç yaşında."
+          }
+        },
+        {
+          "id": "kiz",
+          "ku": "Keç",
+          "tr": "Kız",
+          "en": "Daughter",
+          "telaffuz": "kech",
+          "ses": "/audio/ku/kec.mp3",
+          "gorsel": "/images/aile/kiz.png",
+          "ornek_cumle": {
+            "ku": "Keça min biçûk e.",
+            "tr": "Kızım küçüktür."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ev",
+      "tr": "Ev",
+      "ku": "Mal",
+      "en": "Home",
+      "emoji": "🏠",
+      "seviye": "orta",
+      "kelimeler": [
+        {
+          "id": "ev",
+          "ku": "Mal",
+          "tr": "Ev",
+          "en": "House",
+          "telaffuz": "mal",
+          "ses": "/audio/ku/mal.mp3",
+          "gorsel": "/images/ev/ev.png",
+          "ornek_cumle": {
+            "ku": "Mala me mezin e.",
+            "tr": "Evimiz büyüktür."
+          }
+        },
+        {
+          "id": "kapi",
+          "ku": "Derî",
+          "tr": "Kapı",
+          "en": "Door",
+          "telaffuz": "de-ree",
+          "ses": "/audio/ku/deri.mp3",
+          "gorsel": "/images/ev/kapi.png",
+          "ornek_cumle": {
+            "ku": "Derî vekirî ye.",
+            "tr": "Kapı açık."
+          }
+        },
+        {
+          "id": "pencere",
+          "ku": "Pencere",
+          "tr": "Pencere",
+          "en": "Window",
+          "telaffuz": "pen-je-re",
+          "ses": "/audio/ku/pencere.mp3",
+          "gorsel": "/images/ev/pencere.png",
+          "ornek_cumle": {
+            "ku": "Pencere mezin e.",
+            "tr": "Pencere büyüktür."
+          }
+        },
+        {
+          "id": "masa",
+          "ku": "Mase",
+          "tr": "Masa",
+          "en": "Table",
+          "telaffuz": "ma-se",
+          "ses": "/audio/ku/mase.mp3",
+          "gorsel": "/images/ev/masa.png",
+          "ornek_cumle": {
+            "ku": "Mase ji daran e.",
+            "tr": "Masa ahşaptan."
+          }
+        },
+        {
+          "id": "sandalye",
+          "ku": "Kursî",
+          "tr": "Sandalye",
+          "en": "Chair",
+          "telaffuz": "kur-see",
+          "ses": "/audio/ku/kursi.mp3",
+          "gorsel": "/images/ev/sandalye.png",
+          "ornek_cumle": {
+            "ku": "Kursî nerm e.",
+            "tr": "Sandalye yumuşaktır."
+          }
+        },
+        {
+          "id": "yatak",
+          "ku": "Nivîn",
+          "tr": "Yatak",
+          "en": "Bed",
+          "telaffuz": "ni-veen",
+          "ses": "/audio/ku/nivin.mp3",
+          "gorsel": "/images/ev/yatak.png",
+          "ornek_cumle": {
+            "ku": "Nivîna min nerm e.",
+            "tr": "Yatağım yumuşaktır."
+          }
+        },
+        {
+          "id": "cati",
+          "ku": "Ban",
+          "tr": "Çatı",
+          "en": "Roof",
+          "telaffuz": "ban",
+          "ses": "/audio/ku/ban.mp3",
+          "gorsel": "/images/ev/cati.png",
+          "ornek_cumle": {
+            "ku": "Banê malê sor e.",
+            "tr": "Evin çatısı kırmızıdır."
+          }
+        },
+        {
+          "id": "duvar",
+          "ku": "Dîwar",
+          "tr": "Duvar",
+          "en": "Wall",
+          "telaffuz": "dee-war",
+          "ses": "/audio/ku/diwar.mp3",
+          "gorsel": "/images/ev/duvar.png",
+          "ornek_cumle": {
+            "ku": "Dîwar spî ye.",
+            "tr": "Duvar beyazdır."
+          }
+        },
+        {
+          "id": "salon",
+          "ku": "Holî",
+          "tr": "Salon",
+          "en": "Living room",
+          "telaffuz": "ho-lee",
+          "ses": "/audio/ku/holi.mp3",
+          "gorsel": "/images/ev/salon.png",
+          "ornek_cumle": {
+            "ku": "Holî fireh e.",
+            "tr": "Salon geniştir."
+          }
+        },
+        {
+          "id": "mutfak",
+          "ku": "Metbex",
+          "tr": "Mutfak",
+          "en": "Kitchen",
+          "telaffuz": "met-bekh",
+          "ses": "/audio/ku/metbex.mp3",
+          "gorsel": "/images/ev/mutfak.png",
+          "ornek_cumle": {
+            "ku": "Metbex paqij e.",
+            "tr": "Mutfak temizdir."
+          }
+        },
+        {
+          "id": "banyo",
+          "ku": "Hemam",
+          "tr": "Banyo",
+          "en": "Bathroom",
+          "telaffuz": "he-mam",
+          "ses": "/audio/ku/hemam.mp3",
+          "gorsel": "/images/ev/banyo.png",
+          "ornek_cumle": {
+            "ku": "Hemam piçûk e.",
+            "tr": "Banyo küçüktür."
+          }
+        },
+        {
+          "id": "oda",
+          "ku": "Ode",
+          "tr": "Oda",
+          "en": "Room",
+          "telaffuz": "o-deh",
+          "ses": "/audio/ku/ode.mp3",
+          "gorsel": "/images/ev/oda.png",
+          "ornek_cumle": {
+            "ku": "Odeya min mezin e.",
+            "tr": "Odam büyüktür."
+          }
+        },
+        {
+          "id": "lamba",
+          "ku": "Çira",
+          "tr": "Lamba",
+          "en": "Lamp",
+          "telaffuz": "chi-ra",
+          "ses": "/audio/ku/cira.mp3",
+          "gorsel": "/images/ev/lamba.png",
+          "ornek_cumle": {
+            "ku": "Çira ronak e.",
+            "tr": "Lamba parlıyor."
+          }
+        },
+        {
+          "id": "telefon",
+          "ku": "Telefon",
+          "tr": "Telefon",
+          "en": "Phone",
+          "telaffuz": "te-le-fon",
+          "ses": "/audio/ku/telefon.mp3",
+          "gorsel": "/images/ev/telefon.png",
+          "ornek_cumle": {
+            "ku": "Telefon dizirîne.",
+            "tr": "Telefon çalıyor."
+          }
+        },
+        {
+          "id": "televizyon",
+          "ku": "Televîzyon",
+          "tr": "Televizyon",
+          "en": "Television",
+          "telaffuz": "te-le-veez-yon",
+          "ses": "/audio/ku/televizyon.mp3",
+          "gorsel": "/images/ev/televizyon.png",
+          "ornek_cumle": {
+            "ku": "Televîzyon vekirî ye.",
+            "tr": "Televizyon açık."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hava",
+      "tr": "Hava",
+      "ku": "Hewa",
+      "en": "Weather",
+      "emoji": "☁️",
+      "seviye": "orta",
+      "kelimeler": [
+        {
+          "id": "gunes",
+          "ku": "Roj",
+          "tr": "Güneş",
+          "en": "Sun",
+          "telaffuz": "roj",
+          "ses": "/audio/ku/roj.mp3",
+          "gorsel": "/images/hava/gunes.png",
+          "ornek_cumle": {
+            "ku": "Roj germ e îro.",
+            "tr": "Güneş bugün sıcak."
+          }
+        },
+        {
+          "id": "ay",
+          "ku": "Hîv",
+          "tr": "Ay",
+          "en": "Moon",
+          "telaffuz": "heev",
+          "ses": "/audio/ku/hiv.mp3",
+          "gorsel": "/images/hava/ay.png",
+          "ornek_cumle": {
+            "ku": "Hîv di ezman de ye.",
+            "tr": "Ay gökyüzündedir."
+          }
+        },
+        {
+          "id": "yildiz",
+          "ku": "Stêrk",
+          "tr": "Yıldız",
+          "en": "Star",
+          "telaffuz": "stayrk",
+          "ses": "/audio/ku/sterk.mp3",
+          "gorsel": "/images/hava/yildiz.png",
+          "ornek_cumle": {
+            "ku": "Stêrk dibiriqin.",
+            "tr": "Yıldızlar parlıyor."
+          }
+        },
+        {
+          "id": "gokyuzu",
+          "ku": "Ezman",
+          "tr": "Gökyüzü",
+          "en": "Sky",
+          "telaffuz": "ez-man",
+          "ses": "/audio/ku/ezman.mp3",
+          "gorsel": "/images/hava/gokyuzu.png",
+          "ornek_cumle": {
+            "ku": "Ezman şîn e.",
+            "tr": "Gökyüzü mavidir."
+          }
+        },
+        {
+          "id": "bulut",
+          "ku": "Ewr",
+          "tr": "Bulut",
+          "en": "Cloud",
+          "telaffuz": "ewr",
+          "ses": "/audio/ku/ewr.mp3",
+          "gorsel": "/images/hava/bulut.png",
+          "ornek_cumle": {
+            "ku": "Ewr li ezman in.",
+            "tr": "Bulutlar gökyüzündedir."
+          }
+        },
+        {
+          "id": "yagmur",
+          "ku": "Baran",
+          "tr": "Yağmur",
+          "en": "Rain",
+          "telaffuz": "ba-ran",
+          "ses": "/audio/ku/baran.mp3",
+          "gorsel": "/images/hava/yagmur.png",
+          "ornek_cumle": {
+            "ku": "Baran dibare.",
+            "tr": "Yağmur yağıyor."
+          }
+        },
+        {
+          "id": "kar",
+          "ku": "Berf",
+          "tr": "Kar",
+          "en": "Snow",
+          "telaffuz": "berf",
+          "ses": "/audio/ku/berf.mp3",
+          "gorsel": "/images/hava/kar.png",
+          "ornek_cumle": {
+            "ku": "Berf li ser çiyê ye.",
+            "tr": "Kar dağın üstündedir."
+          }
+        },
+        {
+          "id": "ruzgar",
+          "ku": "Ba",
+          "tr": "Rüzgar",
+          "en": "Wind",
+          "telaffuz": "ba",
+          "ses": "/audio/ku/ba.mp3",
+          "gorsel": "/images/hava/ruzgar.png",
+          "ornek_cumle": {
+            "ku": "Ba xurt e.",
+            "tr": "Rüzgar şiddetlidir."
+          }
+        },
+        {
+          "id": "simsek",
+          "ku": "Birûsk",
+          "tr": "Şimşek",
+          "en": "Lightning",
+          "telaffuz": "bi-roosk",
+          "ses": "/audio/ku/birusk.mp3",
+          "gorsel": "/images/hava/simsek.png",
+          "ornek_cumle": {
+            "ku": "Birûsk diçirûse.",
+            "tr": "Şimşek çakıyor."
+          }
+        },
+        {
+          "id": "soguk",
+          "ku": "Serma",
+          "tr": "Soğuk",
+          "en": "Cold",
+          "telaffuz": "ser-ma",
+          "ses": "/audio/ku/serma.mp3",
+          "gorsel": "/images/hava/soguk.png",
+          "ornek_cumle": {
+            "ku": "Zivistan serma ye.",
+            "tr": "Kış soğuktur."
+          }
+        },
+        {
+          "id": "sicak",
+          "ku": "Germ",
+          "tr": "Sıcak",
+          "en": "Hot",
+          "telaffuz": "germ",
+          "ses": "/audio/ku/germ.mp3",
+          "gorsel": "/images/hava/sicak.png",
+          "ornek_cumle": {
+            "ku": "Hewa germ e.",
+            "tr": "Hava sıcaktır."
+          }
+        },
+        {
+          "id": "ilkbahar",
+          "ku": "Bihar",
+          "tr": "İlkbahar",
+          "en": "Spring",
+          "telaffuz": "bi-har",
+          "ses": "/audio/ku/bihar.mp3",
+          "gorsel": "/images/hava/ilkbahar.png",
+          "ornek_cumle": {
+            "ku": "Biharê kulîlk vedibin.",
+            "tr": "İlkbaharda çiçekler açar."
+          }
+        },
+        {
+          "id": "yaz",
+          "ku": "Havîn",
+          "tr": "Yaz",
+          "en": "Summer",
+          "telaffuz": "ha-veen",
+          "ses": "/audio/ku/havin.mp3",
+          "gorsel": "/images/hava/yaz.png",
+          "ornek_cumle": {
+            "ku": "Havîn germ e.",
+            "tr": "Yaz sıcaktır."
+          }
+        },
+        {
+          "id": "sonbahar",
+          "ku": "Payîz",
+          "tr": "Sonbahar",
+          "en": "Autumn",
+          "telaffuz": "pa-yeez",
+          "ses": "/audio/ku/payiz.mp3",
+          "gorsel": "/images/hava/sonbahar.png",
+          "ornek_cumle": {
+            "ku": "Payîzê pel diweşin.",
+            "tr": "Sonbaharda yapraklar dökülür."
+          }
+        },
+        {
+          "id": "kis",
+          "ku": "Zivistan",
+          "tr": "Kış",
+          "en": "Winter",
+          "telaffuz": "zi-vis-tan",
+          "ses": "/audio/ku/zivistan.mp3",
+          "gorsel": "/images/hava/kis.png",
+          "ornek_cumle": {
+            "ku": "Zivistan sar e.",
+            "tr": "Kış soğuktur."
+          }
+        }
+      ]
+    },
+    {
+      "id": "yiyecekler",
+      "tr": "Yiyecekler",
+      "ku": "Xwarin",
+      "en": "Foods",
+      "emoji": "🍽️",
+      "seviye": "orta",
+      "kelimeler": [
+        {
+          "id": "ekmek",
+          "ku": "Nan",
+          "tr": "Ekmek",
+          "en": "Bread",
+          "telaffuz": "nan",
+          "ses": "/audio/ku/nan.mp3",
+          "gorsel": "/images/yiyecekler/ekmek.png",
+          "ornek_cumle": {
+            "ku": "Nan li ser mase ye.",
+            "tr": "Ekmek masadadır."
+          }
+        },
+        {
+          "id": "su",
+          "ku": "Av",
+          "tr": "Su",
+          "en": "Water",
+          "telaffuz": "av",
+          "ses": "/audio/ku/av.mp3",
+          "gorsel": "/images/yiyecekler/su.png",
+          "ornek_cumle": {
+            "ku": "Av zelal e.",
+            "tr": "Su berraktır."
+          }
+        },
+        {
+          "id": "sut",
+          "ku": "Şîr",
+          "tr": "Süt",
+          "en": "Milk",
+          "telaffuz": "sheer",
+          "ses": "/audio/ku/sir.mp3",
+          "gorsel": "/images/yiyecekler/sut.png",
+          "ornek_cumle": {
+            "ku": "Şîr spî ye.",
+            "tr": "Süt beyazdır."
+          }
+        },
+        {
+          "id": "peynir",
+          "ku": "Penîr",
+          "tr": "Peynir",
+          "en": "Cheese",
+          "telaffuz": "pe-neer",
+          "ses": "/audio/ku/penir.mp3",
+          "gorsel": "/images/yiyecekler/peynir.png",
+          "ornek_cumle": {
+            "ku": "Penîr xweş e.",
+            "tr": "Peynir güzeldir."
+          }
+        },
+        {
+          "id": "yumurta",
+          "ku": "Hêk",
+          "tr": "Yumurta",
+          "en": "Egg",
+          "telaffuz": "hayk",
+          "ses": "/audio/ku/hek.mp3",
+          "gorsel": "/images/yiyecekler/yumurta.png",
+          "ornek_cumle": {
+            "ku": "Mirîşk hêk dide.",
+            "tr": "Tavuk yumurta verir."
+          }
+        },
+        {
+          "id": "et",
+          "ku": "Goşt",
+          "tr": "Et",
+          "en": "Meat",
+          "telaffuz": "gosht",
+          "ses": "/audio/ku/gost.mp3",
+          "gorsel": "/images/yiyecekler/et.png",
+          "ornek_cumle": {
+            "ku": "Goşt pir bi protîn e.",
+            "tr": "Et proteinlidir."
+          }
+        },
+        {
+          "id": "pirinc",
+          "ku": "Birinc",
+          "tr": "Pirinç",
+          "en": "Rice",
+          "telaffuz": "bi-rinj",
+          "ses": "/audio/ku/birinc.mp3",
+          "gorsel": "/images/yiyecekler/pirinc.png",
+          "ornek_cumle": {
+            "ku": "Birinc spî ye.",
+            "tr": "Pirinç beyazdır."
+          }
+        },
+        {
+          "id": "un",
+          "ku": "Ard",
+          "tr": "Un",
+          "en": "Flour",
+          "telaffuz": "ard",
+          "ses": "/audio/ku/ard.mp3",
+          "gorsel": "/images/yiyecekler/un.png",
+          "ornek_cumle": {
+            "ku": "Ard ji genim çêdibe.",
+            "tr": "Un buğdaydan yapılır."
+          }
+        },
+        {
+          "id": "seker",
+          "ku": "Şekir",
+          "tr": "Şeker",
+          "en": "Sugar",
+          "telaffuz": "she-kir",
+          "ses": "/audio/ku/sekir.mp3",
+          "gorsel": "/images/yiyecekler/seker.png",
+          "ornek_cumle": {
+            "ku": "Şekir şîrîn e.",
+            "tr": "Şeker tatlıdır."
+          }
+        },
+        {
+          "id": "tuz",
+          "ku": "Xwê",
+          "tr": "Tuz",
+          "en": "Salt",
+          "telaffuz": "khway",
+          "ses": "/audio/ku/xwe.mp3",
+          "gorsel": "/images/yiyecekler/tuz.png",
+          "ornek_cumle": {
+            "ku": "Xwê di xwarinê de heye.",
+            "tr": "Tuz yemekte vardır."
+          }
+        },
+        {
+          "id": "cay",
+          "ku": "Çay",
+          "tr": "Çay",
+          "en": "Tea",
+          "telaffuz": "chay",
+          "ses": "/audio/ku/cay.mp3",
+          "gorsel": "/images/yiyecekler/cay.png",
+          "ornek_cumle": {
+            "ku": "Çay germ e.",
+            "tr": "Çay sıcaktır."
+          }
+        },
+        {
+          "id": "kahve",
+          "ku": "Qehwe",
+          "tr": "Kahve",
+          "en": "Coffee",
+          "telaffuz": "qeh-we",
+          "ses": "/audio/ku/qehwe.mp3",
+          "gorsel": "/images/yiyecekler/kahve.png",
+          "ornek_cumle": {
+            "ku": "Qehwe tal e.",
+            "tr": "Kahve acıdır."
+          }
+        },
+        {
+          "id": "bal",
+          "ku": "Hingivîn",
+          "tr": "Bal",
+          "en": "Honey",
+          "telaffuz": "hin-gi-veen",
+          "ses": "/audio/ku/hingivin.mp3",
+          "gorsel": "/images/yiyecekler/bal.png",
+          "ornek_cumle": {
+            "ku": "Hingivîn şîrîn e.",
+            "tr": "Bal tatlıdır."
+          }
+        },
+        {
+          "id": "corba",
+          "ku": "Şorbe",
+          "tr": "Çorba",
+          "en": "Soup",
+          "telaffuz": "shor-be",
+          "ses": "/audio/ku/sorbe.mp3",
+          "gorsel": "/images/yiyecekler/corba.png",
+          "ornek_cumle": {
+            "ku": "Şorbe germ e.",
+            "tr": "Çorba sıcaktır."
+          }
+        },
+        {
+          "id": "pasta",
+          "ku": "Kek",
+          "tr": "Pasta",
+          "en": "Cake",
+          "telaffuz": "kek",
+          "ses": "/audio/ku/kek.mp3",
+          "gorsel": "/images/yiyecekler/pasta.png",
+          "ornek_cumle": {
+            "ku": "Kekê zarokan xweş e.",
+            "tr": "Çocukların pastası güzel."
+          }
+        }
+      ]
+    }
+  ]
+}
