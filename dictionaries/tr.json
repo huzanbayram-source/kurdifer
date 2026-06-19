@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "dersler": "Dersler",
+    "kurmanci": "Kurmancî",
+    "zazaca": "Zazaca",
+    "oyunlar": "Oyunlar",
+    "ebeveynler": "Ebeveynler",
+    "videolar": "Videolar",
+    "anasayfa": "Anasayfa",
+    "basla": "Başla",
+    "tum_oyunlar": "Tüm oyunlar",
+    "tum_kategoriler": "Tüm kategoriler"
+  },
+  "footer": {
+    "slogan": "Bi hezkirinê hatiye çêkirin · Sevgiyle yapıldı"
+  },
+  "home": {
+    "rozet": "Eğlenceli Kürtçe öğrenme platformu",
+    "baslik_oncesi": "Çocuğun",
+    "baslik_vurgu": "Kürtçe",
+    "baslik_sonrasi": "öğrensin",
+    "altyazi": "Kurmancî kelimeleri, sesli telaffuzları ve renkli görselleriyle 4-10 yaş arası çocuklara özel olarak hazırlandı.",
+    "cta_basla": "Hemen Başla",
+    "cta_oyunlar": "Oyunları Keşfet",
+    "kategoriler_baslik": "Kategorileri Keşfet",
+    "kategoriler_altyazi": "Her kategoride onlarca kelime, oyun ve etkinlik seni bekliyor."
+  },
+  "lehce_secici": {
+    "kurmanci": "Kurmancî",
+    "zazaca": "Zazaca"
+  },
+  "dil_secici": {
+    "etiket": "Dil",
+    "ac": "Dil değiştir"
+  },
+  "kategori": {
+    "kelime": "kelime",
+    "ipucu_dokun": "Bir karta dokun, örnek cümleyi gör.",
+    "ornek_cumle": "Örnek cümle",
+    "tum_zazaca_kategorileri": "Tüm Zazaca kategorileri",
+    "tum_kurmanci_kategorileri": "Tüm Kurmancî kategorileri",
+    "zazaca_rozet": "Zazaca",
+    "kurmanci_rozet": "Kurmancî"
+  },
+  "ilerleme": {
+    "baslik": "İlerlemen",
+    "ogrenildi": "öğrenildi",
+    "tamamlandi": "tamamlandı",
+    "tamamlandi_mesaji": "🎉 Bu kategorideki tüm kelimeleri öğrendin!",
+    "ogrendim": "Öğrendim",
+    "ogrenildi_buton": "Öğrenildi",
+    "isaretle": "Öğrenildi olarak işaretle",
+    "kaldir": "Öğrenildi işaretini kaldır"
+  },
+  "common": {
+    "hazirlaniyor": "Hazırlanıyor…",
+    "yeniden": "Yeniden",
+    "tekrar_oyna": "Tekrar Oyna",
+    "baska_kategori": "Başka Kategori Dene"
+  },
+  "seviye": {
+    "kolay": "Kolay",
+    "orta": "Orta",
+    "zor": "Zor"
+  }
+}

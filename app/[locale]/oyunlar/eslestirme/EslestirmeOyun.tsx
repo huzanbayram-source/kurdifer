@@ -5,6 +5,8 @@ import Link from "next/link";
 import kurmanjiData from "@/data/kurmanji.json";
 import type { Kategori, Kelime } from "@/lib/kurmanji";
 import { getKelimeEmoji } from "@/lib/kelime-emoji";
+import { DilSecici } from "@/components/DilSecici";
+import type { Locale } from "@/lib/i18n";
 
 const KELIME_SAYISI = 6;
 const KAPATMA_GECIKMESI_MS = 600;
@@ -47,7 +49,7 @@ function olusturKartlar(kategori: Kategori): OyunKarti[] {
   return karistir(kartlar);
 }
 
-export default function EslestirmePage() {
+export function EslestirmeOyun({ locale }: { locale: Locale }) {
   const kategoriler = kurmanjiData.kategoriler as Kategori[];
   const [seciliId, setSeciliId] = useState<string>(kategoriler[0].id);
   const [kartlar, setKartlar] = useState<OyunKarti[]>([]);
@@ -108,7 +110,7 @@ export default function EslestirmePage() {
     <main className="min-h-screen bg-krem text-koyu">
       <header className="sticky top-0 z-30 border-b border-koyu/10 bg-krem/90 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-turuncu text-xl">
               🌟
             </span>
@@ -119,19 +121,14 @@ export default function EslestirmePage() {
 
           <div className="flex items-center gap-2">
             <Link
-              href="/zazaca"
+              href={`/${locale}/oyunlar`}
               className="hidden rounded-full px-3 py-2 font-heading text-sm font-bold text-koyu/80 transition hover:bg-sari/40 hover:text-koyu sm:inline-flex"
             >
-              Zazaca
+              ← Tüm oyunlar
             </Link>
+            <DilSecici locale={locale} />
             <Link
-              href="/ebeveynler"
-              className="hidden rounded-full px-3 py-2 font-heading text-sm font-bold text-koyu/80 transition hover:bg-sari/40 hover:text-koyu sm:inline-flex"
-            >
-              Ebeveynler
-            </Link>
-            <Link
-              href="/"
+              href={`/${locale}`}
               className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
             >
               <span aria-hidden>←</span> Anasayfa

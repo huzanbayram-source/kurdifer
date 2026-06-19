@@ -3,11 +3,18 @@ import type { Metadata } from "next";
 import type { Kategori } from "@/lib/kurmanji";
 import zazacaData from "@/data/zazaca.json";
 import { IlerlemeBar } from "@/components/IlerlemeBar";
+import { DilSecici } from "@/components/DilSecici";
+import { LOCALES, localeAd, localeAltAd, type Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/dictionary";
 
 export const metadata: Metadata = {
   title: "Zazaca — KurdiFêr",
   description: "Çocuklar için Zazaca kelime kategorileri.",
 };
+
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
 
 const kartRenkleri = [
   "bg-turuncu",
@@ -20,14 +27,20 @@ const kartRenkleri = [
   "bg-sari/80",
 ];
 
-export default function ZazacaPage() {
+export default async function ZazacaPage({
+  params,
+}: {
+  params: { locale: Locale };
+}) {
+  const dict = await getDictionary(params.locale);
   const kategoriler = (zazacaData.kategoriler as Kategori[]) ?? [];
+  const locale = params.locale;
 
   return (
     <main className="min-h-screen bg-krem text-koyu">
       <header className="sticky top-0 z-30 border-b border-koyu/10 bg-krem/90 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-turuncu text-xl">
               🌟
             </span>
@@ -37,25 +50,34 @@ export default function ZazacaPage() {
           </Link>
 
           <ul className="hidden items-center gap-2 sm:flex">
-            <NavLink href="/zazaca">Zazaca</NavLink>
-            <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
-            <NavLink href="/ebeveynler">Ebeveynler</NavLink>
-            <NavLink href="/videolar">Videolar</NavLink>
+            <NavLink href={`/${locale}/kurmanji`}>
+              {dict.navbar.kurmanci}
+            </NavLink>
+            <NavLink href={`/${locale}/zazaca`}>{dict.navbar.zazaca}</NavLink>
+            <NavLink href={`/${locale}/oyunlar`}>{dict.navbar.oyunlar}</NavLink>
+            <NavLink href={`/${locale}/ebeveynler`}>
+              {dict.navbar.ebeveynler}
+            </NavLink>
           </ul>
 
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
-          >
-            <span aria-hidden>←</span> Anasayfa
-          </Link>
+          <div className="flex items-center gap-2">
+            <DilSecici locale={locale} />
+            <Link
+              href={`/${locale}`}
+              className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
+            >
+              <span aria-hidden>←</span> {dict.navbar.anasayfa}
+            </Link>
+          </div>
         </nav>
 
         <ul className="flex flex-wrap items-center justify-center gap-1 border-t border-koyu/10 px-4 py-2 sm:hidden">
-          <NavLink href="/zazaca">Zazaca</NavLink>
-          <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
-          <NavLink href="/ebeveynler">Ebeveynler</NavLink>
-          <NavLink href="/videolar">Videolar</NavLink>
+          <NavLink href={`/${locale}/kurmanji`}>{dict.navbar.kurmanci}</NavLink>
+          <NavLink href={`/${locale}/zazaca`}>{dict.navbar.zazaca}</NavLink>
+          <NavLink href={`/${locale}/oyunlar`}>{dict.navbar.oyunlar}</NavLink>
+          <NavLink href={`/${locale}/ebeveynler`}>
+            {dict.navbar.ebeveynler}
+          </NavLink>
         </ul>
       </header>
 
@@ -74,16 +96,16 @@ export default function ZazacaPage() {
 
         <div className="mx-auto mt-8 inline-flex w-full max-w-xs items-center gap-1 rounded-full border-2 border-koyu/10 bg-white p-1 sm:max-w-sm">
           <Link
-            href="/"
+            href={`/${locale}/kurmanji`}
             className="flex-1 rounded-full px-4 py-2 text-center font-heading text-sm font-bold text-koyu/70 transition hover:text-koyu sm:text-base"
           >
-            Kurmancî
+            {dict.lehce_secici.kurmanci}
           </Link>
           <span
             aria-current="page"
             className="flex-1 rounded-full bg-turuncu px-4 py-2 text-center font-heading text-sm font-bold text-krem shadow-sm sm:text-base"
           >
-            Zazaca
+            {dict.lehce_secici.zazaca}
           </span>
         </div>
       </section>
@@ -93,8 +115,11 @@ export default function ZazacaPage() {
           {kategoriler.map((kat, i) => (
             <KategoriKart
               key={kat.id}
+              locale={locale}
               kategori={kat}
               renkClass={kartRenkleri[i % kartRenkleri.length]}
+              kelimeMetin={dict.kategori.kelime}
+              ogrenildiText={dict.ilerleme.ogrenildi}
             />
           ))}
         </div>
@@ -106,7 +131,7 @@ export default function ZazacaPage() {
             © {new Date().getFullYear()}{" "}
             <span className="font-heading font-bold text-koyu">KurdiFêr</span>
           </p>
-          <p>Bi hezkirinê hatiye çêkirin · Sevgiyle yapıldı</p>
+          <p>{dict.footer.slogan}</p>
         </div>
       </footer>
     </main>
@@ -133,11 +158,17 @@ function NavLink({
 }
 
 function KategoriKart({
+  locale,
   kategori,
   renkClass,
+  kelimeMetin,
+  ogrenildiText,
 }: {
+  locale: Locale;
   kategori: Kategori;
   renkClass: string;
+  kelimeMetin: string;
+  ogrenildiText: string;
 }) {
   const koyuKart = renkClass.startsWith("bg-koyu");
   const textColor = koyuKart ? "text-krem" : "text-koyu";
@@ -145,7 +176,7 @@ function KategoriKart({
 
   return (
     <Link
-      href={`/zazaca/${kategori.id}`}
+      href={`/${locale}/zazaca/${kategori.id}`}
       className={`${renkClass} ${textColor} group relative flex flex-col justify-between overflow-hidden rounded-3xl p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl sm:p-6`}
     >
       <span className="text-4xl transition-transform group-hover:scale-110 sm:text-5xl">
@@ -153,15 +184,17 @@ function KategoriKart({
       </span>
       <div className="mt-6">
         <p className="font-heading text-xl font-extrabold sm:text-2xl">
-          {kategori.tr}
+          {localeAd(kategori, locale)}
         </p>
         <p className={`mt-0.5 text-sm font-medium ${altText}`}>
-          {kategori.ku} · {kategori.kelimeler.length} kelime
+          {localeAltAd(kategori, locale)} · {kategori.kelimeler.length}{" "}
+          {kelimeMetin}
         </p>
         <IlerlemeBar
           dil="zazaca"
           kategoriId={kategori.id}
           koyuKart={koyuKart}
+          ogrenildiText={ogrenildiText}
         />
       </div>
       <span className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/10 transition group-hover:scale-150" />

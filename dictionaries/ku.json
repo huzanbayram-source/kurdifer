@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "dersler": "Ders",
+    "kurmanci": "Kurmancî",
+    "zazaca": "Zazakî",
+    "oyunlar": "Lîstik",
+    "ebeveynler": "Dêûbav",
+    "videolar": "Vîdyo",
+    "anasayfa": "Mal",
+    "basla": "Dest Pê Bike",
+    "tum_oyunlar": "Hemû lîstik",
+    "tum_kategoriler": "Hemû kategorî"
+  },
+  "footer": {
+    "slogan": "Bi hezkirinê hatiye çêkirin"
+  },
+  "home": {
+    "rozet": "Platforma fêrbûna Kurdî ya kêfxweş",
+    "baslik_oncesi": "Bila zarokê te",
+    "baslik_vurgu": "Kurdî",
+    "baslik_sonrasi": "fêr bibe",
+    "altyazi": "Bi peyvên Kurmancî, deng û dîmenên rengîn ji bo zarokên 4-10 salî hatiye amade kirin.",
+    "cta_basla": "Niha Dest Pê Bike",
+    "cta_oyunlar": "Lîstikan Keşf Bike",
+    "kategoriler_baslik": "Kategorîyan Keşf Bike",
+    "kategoriler_altyazi": "Di her kategorîyê de bi dehan peyv, lîstik û çalakî li benda te ne."
+  },
+  "lehce_secici": {
+    "kurmanci": "Kurmancî",
+    "zazaca": "Zazakî"
+  },
+  "dil_secici": {
+    "etiket": "Ziman",
+    "ac": "Ziman biguherîne"
+  },
+  "kategori": {
+    "kelime": "peyv",
+    "ipucu_dokun": "Li kartekê bitik, hevoka mînak bibîne.",
+    "ornek_cumle": "Hevoka mînak",
+    "tum_zazaca_kategorileri": "Hemû kategorîyên Zazakî",
+    "tum_kurmanci_kategorileri": "Hemû kategorîyên Kurmancî",
+    "zazaca_rozet": "Zazakî",
+    "kurmanci_rozet": "Kurmancî"
+  },
+  "ilerleme": {
+    "baslik": "Pêşveçûna te",
+    "ogrenildi": "hatiye fêrbûn",
+    "tamamlandi": "qediya",
+    "tamamlandi_mesaji": "🎉 Te hemû peyvên vê kategorîyê fêr bûye!",
+    "ogrendim": "Min Fêr Bû",
+    "ogrenildi_buton": "Fêrbûyî",
+    "isaretle": "Wek fêrbûyî nîşan bike",
+    "kaldir": "Nîşana fêrbûyî rake"
+  },
+  "common": {
+    "hazirlaniyor": "Tê amade kirin…",
+    "yeniden": "Dîsa",
+    "tekrar_oyna": "Dîsa Bilîze",
+    "baska_kategori": "Kategorîyeke Din Biceribîne"
+  },
+  "seviye": {
+    "kolay": "hêsan",
+    "orta": "navîn",
+    "zor": "zor"
+  }
+}

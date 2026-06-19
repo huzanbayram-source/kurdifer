@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "dersler": "Lessons",
+    "kurmanci": "Kurmancî",
+    "zazaca": "Zazaca",
+    "oyunlar": "Games",
+    "ebeveynler": "Parents",
+    "videolar": "Videos",
+    "anasayfa": "Home",
+    "basla": "Start",
+    "tum_oyunlar": "All games",
+    "tum_kategoriler": "All categories"
+  },
+  "footer": {
+    "slogan": "Bi hezkirinê hatiye çêkirin · Made with love"
+  },
+  "home": {
+    "rozet": "Fun Kurdish learning platform",
+    "baslik_oncesi": "Let your child learn",
+    "baslik_vurgu": "Kurdish",
+    "baslik_sonrasi": "",
+    "altyazi": "Kurmancî words with audio pronunciations and colorful visuals, designed for children aged 4-10.",
+    "cta_basla": "Start Now",
+    "cta_oyunlar": "Explore Games",
+    "kategoriler_baslik": "Explore Categories",
+    "kategoriler_altyazi": "Dozens of words, games and activities await in every category."
+  },
+  "lehce_secici": {
+    "kurmanci": "Kurmancî",
+    "zazaca": "Zazaca"
+  },
+  "dil_secici": {
+    "etiket": "Language",
+    "ac": "Change language"
+  },
+  "kategori": {
+    "kelime": "words",
+    "ipucu_dokun": "Tap a card to see the example sentence.",
+    "ornek_cumle": "Example sentence",
+    "tum_zazaca_kategorileri": "All Zazaca categories",
+    "tum_kurmanci_kategorileri": "All Kurmancî categories",
+    "zazaca_rozet": "Zazaca",
+    "kurmanci_rozet": "Kurmancî"
+  },
+  "ilerleme": {
+    "baslik": "Your progress",
+    "ogrenildi": "learned",
+    "tamamlandi": "completed",
+    "tamamlandi_mesaji": "🎉 You learned all words in this category!",
+    "ogrendim": "I learned",
+    "ogrenildi_buton": "Learned",
+    "isaretle": "Mark as learned",
+    "kaldir": "Remove learned mark"
+  },
+  "common": {
+    "hazirlaniyor": "Loading…",
+    "yeniden": "Restart",
+    "tekrar_oyna": "Play Again",
+    "baska_kategori": "Try Another Category"
+  },
+  "seviye": {
+    "kolay": "easy",
+    "orta": "medium",
+    "zor": "hard"
+  }
+}

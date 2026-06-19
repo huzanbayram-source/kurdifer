@@ -13,9 +13,17 @@ interface Props {
   dil: Dil;
   kelimeId: string;
   className?: string;
+  ogrendimText: string;
+  ogrenildiText: string;
 }
 
-export function OgrendimButonu({ dil, kelimeId, className = "" }: Props) {
+export function OgrendimButonu({
+  dil,
+  kelimeId,
+  className = "",
+  ogrendimText,
+  ogrenildiText,
+}: Props) {
   const [mounted, setMounted] = useState(false);
   const [ogrenildi, setOgrenildi] = useState(false);
 
@@ -74,7 +82,7 @@ export function OgrendimButonu({ dil, kelimeId, className = "" }: Props) {
       >
         <polyline points="20 6 9 17 4 12" />
       </svg>
-      {ogrenildi ? "Öğrenildi" : "Öğrendim"}
+      {ogrenildi ? ogrenildiText : ogrendimText}
     </button>
   );
 }

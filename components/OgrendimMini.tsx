@@ -13,9 +13,17 @@ interface Props {
   dil: Dil;
   kelimeId: string;
   className?: string;
+  isaretleText: string;
+  kaldirText: string;
 }
 
-export function OgrendimMini({ dil, kelimeId, className = "" }: Props) {
+export function OgrendimMini({
+  dil,
+  kelimeId,
+  className = "",
+  isaretleText,
+  kaldirText,
+}: Props) {
   const [mounted, setMounted] = useState(false);
   const [ogrenildi, setOgrenildi] = useState(false);
 
@@ -53,12 +61,8 @@ export function OgrendimMini({ dil, kelimeId, className = "" }: Props) {
       type="button"
       onClick={tikla}
       aria-pressed={ogrenildi}
-      aria-label={
-        ogrenildi
-          ? "Öğrenildi işaretini kaldır"
-          : "Öğrenildi olarak işaretle"
-      }
-      title={ogrenildi ? "Öğrenildi ✓" : "Öğrendim olarak işaretle"}
+      aria-label={ogrenildi ? kaldirText : isaretleText}
+      title={ogrenildi ? `✓ ${kaldirText}` : isaretleText}
       className={`grid place-items-center rounded-full shadow-md transition focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 ${
         ogrenildi
           ? "scale-100 bg-emerald-500 text-white hover:bg-emerald-600 active:scale-95"

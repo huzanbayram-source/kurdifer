@@ -1,5 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { DilSecici } from "@/components/DilSecici";
+import { LOCALES, type Locale } from "@/lib/i18n";
+
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
 
 const YAYIN_TARIHI = "2026-06-19";
 const SITE_URL = "https://kurdifer.app";
@@ -350,7 +356,12 @@ const jsonLd = {
   },
 };
 
-export default function EbeveynlerPage() {
+export default function EbeveynlerPage({
+  params,
+}: {
+  params: { locale: Locale };
+}) {
+  const locale = params.locale;
   return (
     <main className="min-h-screen bg-krem text-koyu">
       <script
@@ -358,13 +369,13 @@ export default function EbeveynlerPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Navbar />
+      <Navbar locale={locale} />
 
       <article>
-        <Hero />
+        <Hero locale={locale} />
         <Icindekiler />
         <MakaleGovde />
-        <SonCTA />
+        <SonCTA locale={locale} />
       </article>
 
       <Footer />
@@ -372,11 +383,11 @@ export default function EbeveynlerPage() {
   );
 }
 
-function Navbar() {
+function Navbar({ locale }: { locale: Locale }) {
   return (
     <header className="sticky top-0 z-30 border-b border-koyu/10 bg-krem/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href={`/${locale}`} className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-turuncu text-xl">
             🌟
           </span>
@@ -385,22 +396,25 @@ function Navbar() {
           </span>
         </Link>
 
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
-        >
-          <span aria-hidden>←</span> Anasayfa
-        </Link>
+        <div className="flex items-center gap-2">
+          <DilSecici locale={locale} />
+          <Link
+            href={`/${locale}`}
+            className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
+          >
+            <span aria-hidden>←</span> Anasayfa
+          </Link>
+        </div>
       </nav>
     </header>
   );
 }
 
-function Hero() {
+function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="mx-auto max-w-3xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
       <Link
-        href="/"
+        href={`/${locale}`}
         className="inline-flex items-center gap-1 text-sm font-semibold text-koyu/60 transition hover:text-turuncu"
       >
         <span aria-hidden>‹</span> Anasayfa
@@ -518,7 +532,7 @@ function Bolum({ bolum }: { bolum: Bolum }) {
   );
 }
 
-function SonCTA() {
+function SonCTA({ locale }: { locale: Locale }) {
   return (
     <section className="mx-auto mt-16 max-w-3xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
       <div className="rounded-3xl bg-koyu p-8 text-center text-krem shadow-xl sm:p-10">
@@ -534,13 +548,13 @@ function SonCTA() {
         </p>
         <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link
-            href="/"
+            href={`/${locale}`}
             className="w-full rounded-full bg-turuncu px-7 py-3 font-heading font-bold text-krem shadow-lg shadow-turuncu/30 transition hover:-translate-y-0.5 hover:bg-sari hover:text-koyu sm:w-auto"
           >
             Kurmancî ile başla
           </Link>
           <Link
-            href="/zazaca"
+            href={`/${locale}/zazaca`}
             className="w-full rounded-full border-2 border-krem/30 bg-koyu px-7 py-3 font-heading font-bold text-krem transition hover:border-turuncu hover:text-turuncu sm:w-auto"
           >
             Zazaca ile başla

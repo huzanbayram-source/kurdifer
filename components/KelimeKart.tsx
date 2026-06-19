@@ -7,13 +7,23 @@ import { SesButonu } from "@/components/SesButonu";
 import { OgrendimButonu } from "@/components/OgrendimButonu";
 import { OgrendimMini } from "@/components/OgrendimMini";
 
+export interface KelimeKartLabels {
+  ornek_cumle: string;
+  ogrendim: string;
+  ogrenildi: string;
+  isaretle: string;
+  kaldir: string;
+}
+
 interface Props {
   kelime: Kelime;
   emoji: string;
   dil: Dil;
+  ceviri: string;
+  labels: KelimeKartLabels;
 }
 
-export function KelimeKart({ kelime, emoji, dil }: Props) {
+export function KelimeKart({ kelime, emoji, dil, ceviri, labels }: Props) {
   const [acik, setAcik] = useState(false);
 
   return (
@@ -26,9 +36,7 @@ export function KelimeKart({ kelime, emoji, dil }: Props) {
         type="button"
         onClick={() => setAcik((v) => !v)}
         aria-expanded={acik}
-        aria-label={`${kelime.ku} kelimesinin örnek cümlesini ${
-          acik ? "gizle" : "göster"
-        }`}
+        aria-label={kelime.ku}
         className="block w-full p-5 pr-20 text-left sm:p-6 sm:pr-24"
       >
         <div className="flex items-start gap-4">
@@ -41,7 +49,7 @@ export function KelimeKart({ kelime, emoji, dil }: Props) {
               {kelime.ku}
             </p>
             <p className="mt-0.5 text-base font-medium text-koyu/70 sm:text-lg">
-              {kelime.tr}
+              {ceviri}
             </p>
             <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-sari/40 px-3 py-1 text-xs font-semibold text-koyu sm:text-sm">
               <span className="italic">/{kelime.telaffuz}/</span>
@@ -59,7 +67,7 @@ export function KelimeKart({ kelime, emoji, dil }: Props) {
           <div className="px-5 pb-5 sm:px-6 sm:pb-6">
             <div className="rounded-2xl bg-krem p-4 sm:p-5">
               <p className="font-heading text-xs font-bold uppercase tracking-wider text-turuncu">
-                Örnek cümle
+                {labels.ornek_cumle}
               </p>
               <p className="mt-2 font-heading text-lg font-bold text-koyu sm:text-xl">
                 {kelime.ornek_cumle.ku}
@@ -68,7 +76,12 @@ export function KelimeKart({ kelime, emoji, dil }: Props) {
                 {kelime.ornek_cumle.tr}
               </p>
               <div className="mt-4">
-                <OgrendimButonu dil={dil} kelimeId={kelime.id} />
+                <OgrendimButonu
+                  dil={dil}
+                  kelimeId={kelime.id}
+                  ogrendimText={labels.ogrendim}
+                  ogrenildiText={labels.ogrenildi}
+                />
               </div>
             </div>
           </div>
@@ -78,12 +91,14 @@ export function KelimeKart({ kelime, emoji, dil }: Props) {
       <div className="absolute right-4 top-4 z-10 flex flex-col gap-2 sm:right-5 sm:top-5">
         <SesButonu
           text={kelime.ku}
-          ariaLabel={`${kelime.ku} kelimesini dinle`}
+          ariaLabel={kelime.ku}
           className="h-11 w-11 sm:h-12 sm:w-12"
         />
         <OgrendimMini
           dil={dil}
           kelimeId={kelime.id}
+          isaretleText={labels.isaretle}
+          kaldirText={labels.kaldir}
           className="h-11 w-11 sm:h-12 sm:w-12"
         />
       </div>

@@ -3,6 +3,13 @@ import { Kategori } from "@/lib/kurmanji";
 import kurmanjiData from "@/data/kurmanji.json";
 import { SesButonu } from "@/components/SesButonu";
 import { IlerlemeBar } from "@/components/IlerlemeBar";
+import { DilSecici } from "@/components/DilSecici";
+import { LOCALES, localeAd, localeAltAd, type Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/dictionary";
+
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
 
 const heroKelimeler = [
   { ku: "Pisîk", tr: "Kedi", emoji: "🐱" },
@@ -23,24 +30,43 @@ const kartRenkleri = [
   "bg-sari/80",
 ];
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: { locale: Locale };
+}) {
+  const dict = await getDictionary(params.locale);
   const kategoriler = (kurmanjiData.kategoriler as Kategori[]) ?? [];
+  const locale = params.locale;
 
   return (
     <main className="min-h-screen bg-krem text-koyu">
-      <Navbar />
-      <Hero />
-      <KategoriGrid kategoriler={kategoriler} />
-      <Footer />
+      <Navbar locale={locale} dict={dict.navbar} />
+      <Hero locale={locale} dict={dict.home} />
+      <KategoriGrid
+        locale={locale}
+        kategoriler={kategoriler}
+        dictHome={dict.home}
+        dictLehce={dict.lehce_secici}
+        kelimeMetin={dict.kategori.kelime}
+        ogrenildiText={dict.ilerleme.ogrenildi}
+      />
+      <Footer slogan={dict.footer.slogan} />
     </main>
   );
 }
 
-function Navbar() {
+function Navbar({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: { [k: string]: string };
+}) {
   return (
     <header className="sticky top-0 z-30 border-b border-koyu/10 bg-krem/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href={`/${locale}`} className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-turuncu text-xl">
             🌟
           </span>
@@ -50,27 +76,28 @@ function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-2 sm:flex">
-          <NavLink href="/dersler">Dersler</NavLink>
-          <NavLink href="/zazaca">Zazaca</NavLink>
-          <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
-          <NavLink href="/ebeveynler">Ebeveynler</NavLink>
-          <NavLink href="/videolar">Videolar</NavLink>
+          <NavLink href={`/${locale}/kurmanji`}>{dict.kurmanci}</NavLink>
+          <NavLink href={`/${locale}/zazaca`}>{dict.zazaca}</NavLink>
+          <NavLink href={`/${locale}/oyunlar`}>{dict.oyunlar}</NavLink>
+          <NavLink href={`/${locale}/ebeveynler`}>{dict.ebeveynler}</NavLink>
         </ul>
 
-        <Link
-          href="/dersler"
-          className="rounded-full bg-koyu px-4 py-2 font-heading text-sm font-bold text-krem transition hover:bg-turuncu sm:px-5"
-        >
-          Başla
-        </Link>
+        <div className="flex items-center gap-2">
+          <DilSecici locale={locale} />
+          <Link
+            href={`/${locale}/kurmanji`}
+            className="rounded-full bg-koyu px-4 py-2 font-heading text-sm font-bold text-krem transition hover:bg-turuncu sm:px-5"
+          >
+            {dict.basla}
+          </Link>
+        </div>
       </nav>
 
       <ul className="flex flex-wrap items-center justify-center gap-1 border-t border-koyu/10 px-4 py-2 sm:hidden">
-        <NavLink href="/dersler">Dersler</NavLink>
-        <NavLink href="/zazaca">Zazaca</NavLink>
-        <NavLink href="/oyunlar/eslestirme">Oyunlar</NavLink>
-        <NavLink href="/ebeveynler">Ebeveynler</NavLink>
-        <NavLink href="/videolar">Videolar</NavLink>
+        <NavLink href={`/${locale}/kurmanji`}>{dict.kurmanci}</NavLink>
+        <NavLink href={`/${locale}/zazaca`}>{dict.zazaca}</NavLink>
+        <NavLink href={`/${locale}/oyunlar`}>{dict.oyunlar}</NavLink>
+        <NavLink href={`/${locale}/ebeveynler`}>{dict.ebeveynler}</NavLink>
       </ul>
     </header>
   );
@@ -95,46 +122,53 @@ function NavLink({
   );
 }
 
-function Hero() {
+function Hero({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: { [k: string]: string };
+}) {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 pb-12 pt-10 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="text-center lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full bg-sari/40 px-4 py-1.5 font-heading text-sm font-bold text-koyu">
-              <span>🎉</span> Eğlenceli Kürtçe öğrenme platformu
+              <span>🎉</span> {dict.rozet}
             </span>
             <h1 className="mt-5 font-heading text-4xl font-black leading-tight text-balance sm:text-5xl lg:text-6xl">
-              Çocuğun{" "}
+              {dict.baslik_oncesi}{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 text-turuncu">Kürtçe</span>
+                <span className="relative z-10 text-turuncu">
+                  {dict.baslik_vurgu}
+                </span>
                 <span className="absolute inset-x-0 bottom-1 -z-0 h-3 rounded-full bg-sari/70" />
               </span>{" "}
-              öğrensin
+              {dict.baslik_sonrasi}
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-base text-koyu/70 sm:text-lg lg:mx-0">
-              Kurmancî kelimeleri, sesli telaffuzları ve renkli görselleriyle
-              4-10 yaş arası çocuklara özel olarak hazırlandı.
+              {dict.altyazi}
             </p>
             <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <Link
-                href="/dersler"
+                href={`/${locale}/kurmanji`}
                 className="w-full rounded-full bg-turuncu px-7 py-3 font-heading font-bold text-krem shadow-lg shadow-turuncu/30 transition hover:-translate-y-0.5 hover:bg-koyu sm:w-auto"
               >
-                Hemen Başla
+                {dict.cta_basla}
               </Link>
               <Link
-                href="/oyunlar/eslestirme"
+                href={`/${locale}/oyunlar`}
                 className="w-full rounded-full border-2 border-koyu/10 bg-white px-7 py-3 font-heading font-bold text-koyu transition hover:border-turuncu hover:text-turuncu sm:w-auto"
               >
-                Oyunları Keşfet
+                {dict.cta_oyunlar}
               </Link>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
             {heroKelimeler.map((k, i) => (
-              <KelimeKart key={k.ku} kelime={k} index={i} />
+              <HeroKelimeKart key={k.ku} kelime={k} index={i} />
             ))}
           </div>
         </div>
@@ -143,7 +177,7 @@ function Hero() {
   );
 }
 
-function KelimeKart({
+function HeroKelimeKart({
   kelime,
   index,
 }: {
@@ -186,15 +220,29 @@ function KelimeKart({
   );
 }
 
-function KategoriGrid({ kategoriler }: { kategoriler: Kategori[] }) {
+function KategoriGrid({
+  locale,
+  kategoriler,
+  dictHome,
+  dictLehce,
+  kelimeMetin,
+  ogrenildiText,
+}: {
+  locale: Locale;
+  kategoriler: Kategori[];
+  dictHome: { [k: string]: string };
+  dictLehce: { [k: string]: string };
+  kelimeMetin: string;
+  ogrenildiText: string;
+}) {
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mb-8 flex flex-col items-center text-center sm:mb-12">
         <h2 className="font-heading text-3xl font-black sm:text-4xl">
-          Kategorileri Keşfet
+          {dictHome.kategoriler_baslik}
         </h2>
         <p className="mt-3 max-w-md text-koyu/70">
-          Her kategoride onlarca kelime, oyun ve etkinlik seni bekliyor.
+          {dictHome.kategoriler_altyazi}
         </p>
 
         <div
@@ -208,15 +256,15 @@ function KategoriGrid({ kategoriler }: { kategoriler: Kategori[] }) {
             aria-current="page"
             className="flex-1 rounded-full bg-turuncu px-4 py-2 text-center font-heading text-sm font-bold text-krem shadow-sm sm:text-base"
           >
-            Kurmancî
+            {dictLehce.kurmanci}
           </span>
           <Link
             role="tab"
             aria-selected="false"
-            href="/zazaca"
+            href={`/${locale}/zazaca`}
             className="flex-1 rounded-full px-4 py-2 text-center font-heading text-sm font-bold text-koyu/70 transition hover:text-koyu sm:text-base"
           >
-            Zazaca
+            {dictLehce.zazaca}
           </Link>
         </div>
       </div>
@@ -225,8 +273,11 @@ function KategoriGrid({ kategoriler }: { kategoriler: Kategori[] }) {
         {kategoriler.map((kat, i) => (
           <KategoriKart
             key={kat.id}
+            locale={locale}
             kategori={kat}
             renkClass={kartRenkleri[i % kartRenkleri.length]}
+            kelimeMetin={kelimeMetin}
+            ogrenildiText={ogrenildiText}
           />
         ))}
       </div>
@@ -235,11 +286,17 @@ function KategoriGrid({ kategoriler }: { kategoriler: Kategori[] }) {
 }
 
 function KategoriKart({
+  locale,
   kategori,
   renkClass,
+  kelimeMetin,
+  ogrenildiText,
 }: {
+  locale: Locale;
   kategori: Kategori;
   renkClass: string;
+  kelimeMetin: string;
+  ogrenildiText: string;
 }) {
   const koyuKart = renkClass.startsWith("bg-koyu");
   const textColor = koyuKart ? "text-krem" : "text-koyu";
@@ -247,7 +304,7 @@ function KategoriKart({
 
   return (
     <Link
-      href={`/kurmanji/${kategori.id}`}
+      href={`/${locale}/kurmanji/${kategori.id}`}
       className={`${renkClass} ${textColor} group relative flex flex-col justify-between overflow-hidden rounded-3xl p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl sm:p-6`}
     >
       <span className="text-4xl transition-transform group-hover:scale-110 sm:text-5xl">
@@ -255,15 +312,17 @@ function KategoriKart({
       </span>
       <div className="mt-6">
         <p className="font-heading text-xl font-extrabold sm:text-2xl">
-          {kategori.tr}
+          {localeAd(kategori, locale)}
         </p>
         <p className={`mt-0.5 text-sm font-medium ${altText}`}>
-          {kategori.ku} · {kategori.kelimeler.length} kelime
+          {localeAltAd(kategori, locale)} · {kategori.kelimeler.length}{" "}
+          {kelimeMetin}
         </p>
         <IlerlemeBar
           dil="kurmanji"
           kategoriId={kategori.id}
           koyuKart={koyuKart}
+          ogrenildiText={ogrenildiText}
         />
       </div>
       <span className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/10 transition group-hover:scale-150" />
@@ -271,7 +330,7 @@ function KategoriKart({
   );
 }
 
-function Footer() {
+function Footer({ slogan }: { slogan: string }) {
   return (
     <footer className="border-t border-koyu/10 bg-krem">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-koyu/60 sm:flex-row sm:px-6 lg:px-8">
@@ -279,7 +338,7 @@ function Footer() {
           © {new Date().getFullYear()}{" "}
           <span className="font-heading font-bold text-koyu">KurdiFêr</span>
         </p>
-        <p>Bi hezkirinê hatiye çêkirin · Sevgiyle yapıldı</p>
+        <p>{slogan}</p>
       </div>
     </footer>
   );

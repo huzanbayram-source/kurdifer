@@ -12,9 +12,15 @@ interface Props {
   dil: Dil;
   kategoriId: string;
   koyuKart?: boolean;
+  ogrenildiText: string;
 }
 
-export function IlerlemeBar({ dil, kategoriId, koyuKart = false }: Props) {
+export function IlerlemeBar({
+  dil,
+  kategoriId,
+  koyuKart = false,
+  ogrenildiText,
+}: Props) {
   const [progress, setProgress] = useState({
     ogrenilen: 0,
     toplam: getKategoriToplam(dil, kategoriId),
@@ -33,7 +39,10 @@ export function IlerlemeBar({ dil, kategoriId, koyuKart = false }: Props) {
   const textRenk = koyuKart ? "text-krem/80" : "text-koyu/70";
 
   return (
-    <div className="mt-3" aria-label={`${ogrenilen} / ${toplam} öğrenildi`}>
+    <div
+      className="mt-3"
+      aria-label={`${ogrenilen} / ${toplam} ${ogrenildiText}`}
+    >
       <div
         className={`h-1.5 w-full overflow-hidden rounded-full ${trackBg}`}
         role="progressbar"
@@ -47,7 +56,7 @@ export function IlerlemeBar({ dil, kategoriId, koyuKart = false }: Props) {
         />
       </div>
       <p className={`mt-1.5 text-xs font-semibold ${textRenk}`}>
-        {ogrenilen}/{toplam} öğrenildi
+        {ogrenilen}/{toplam} {ogrenildiText}
       </p>
     </div>
   );

@@ -11,9 +11,18 @@ import {
 interface Props {
   dil: Dil;
   kategoriId: string;
+  baslikText: string;
+  tamamlandiText: string;
+  tamamlandiMesaj: string;
 }
 
-export function IlerlemePanel({ dil, kategoriId }: Props) {
+export function IlerlemePanel({
+  dil,
+  kategoriId,
+  baslikText,
+  tamamlandiText,
+  tamamlandiMesaj,
+}: Props) {
   const [progress, setProgress] = useState({
     ogrenilen: 0,
     toplam: getKategoriToplam(dil, kategoriId),
@@ -37,7 +46,7 @@ export function IlerlemePanel({ dil, kategoriId }: Props) {
             {tamamlandi ? "🏆" : "🎯"}
           </span>
           <p className="font-heading text-sm font-bold uppercase tracking-wider text-koyu/70 sm:text-base">
-            İlerlemen
+            {baslikText}
           </p>
         </div>
         <p className="font-heading text-xl font-black text-koyu sm:text-2xl">
@@ -60,9 +69,7 @@ export function IlerlemePanel({ dil, kategoriId }: Props) {
       </div>
 
       <p className="mt-2 text-xs font-semibold text-koyu/60 sm:text-sm">
-        {tamamlandi
-          ? "🎉 Bu kategorideki tüm kelimeleri öğrendin!"
-          : `%${yuzde} tamamlandı`}
+        {tamamlandi ? tamamlandiMesaj : `%${yuzde} ${tamamlandiText}`}
       </p>
     </div>
   );
