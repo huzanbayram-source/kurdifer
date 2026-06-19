@@ -76,5 +76,165 @@
     "baslik_vurgu": "words",
     "baslik_sonrasi": "",
     "altyazi": "127 words in Zazakî dialect with pronunciation guide and example sentences."
+  },
+  "oyunlar_sayfa": {
+    "rozet": "Games",
+    "baslik_oncesi": "Play and",
+    "baslik_vurgu": "learn",
+    "baslik_sonrasi": "",
+    "altyazi": "Reinforce words with fun games. Each game develops a different skill.",
+    "eslestirme_baslik": "Memory Match",
+    "eslestirme_aciklama": "Match the Kurmancî word with its emoji. A memory and matching game.",
+    "bulmaca_baslik": "Word Puzzle",
+    "bulmaca_aciklama": "Fill in the missing letters. The translation helps; correct guesses earn points."
+  },
+  "ebeveynler": {
+    "meta_baslik": "How to Teach Your Child Kurdish at Home? A Comprehensive Guide for Parents",
+    "meta_aciklama": "How do you teach your child Kurdish (Kurmancî or Kirmanckî)? Science, daily routine suggestions, a KurdiFêr usage guide, common mistakes, and practical tips for diaspora families.",
+    "meta_anahtarlar": ["teach Kurdish", "teach a child Kurdish", "learn Kurmancî", "learn Zazakî", "Kirmanckî", "bilingual child", "diaspora", "mother tongue", "parents guide", "KurdiFêr"],
+    "geri_link": "Home",
+    "rozet": "Parents Guide",
+    "hero_baslik_1": "How to Teach Your Child",
+    "hero_baslik_vurgu": "Kurdish",
+    "hero_baslik_2": "at Home?",
+    "hero_altyazi": "A comprehensive guide for parents: the science, daily routines, the right tools, and common mistakes.",
+    "okuma_etiketi": "min read",
+    "yazar": "KurdiFêr Editorial Team",
+    "tarih_locale": "en-US",
+    "icindekiler_baslik": "Contents",
+    "bolumler": [
+      {
+        "id": "giris",
+        "numara": 1,
+        "baslik": "Why this guide?",
+        "paragraflar": [
+          "You want to teach your child Kurdish but don't know where to start. You are not alone. In Turkey, in Europe, and around the world, thousands of parents are asking the same question: how do I pass my mother tongue on to my child?",
+          "The good news: science supports early bilingualism. Children between three and seven can learn a new language as deeply as their first one. And Kurdish — Kurmancî or Kirmanckî — is more than just a means of communication. It is a cultural heritage carried by grandmothers' lullabies, dengbêjs' songs, and the flames of Newroz. Passing this language on to your child means reminding them who they are.",
+          "This guide gives you practical steps: which routines work, how to use KurdiFêr, which traps to avoid, and what diaspora families should watch out for."
+        ]
+      },
+      {
+        "id": "beyin",
+        "numara": 2,
+        "baslik": "What happens in a child's brain when learning a language?",
+        "paragraflar": [
+          "The years from birth to puberty are known as a \"critical period\" for language learning. During this time, a child's brain is extraordinarily sensitive to language signals and can internalize multiple languages in parallel as native tongues.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Synaptic pruning", "metin": "The brain strengthens frequently used neural connections and prunes the unused ones. If a child doesn't hear Kurdish, the circuits dedicated to it weaken." },
+              { "kalin": "Phonology window", "metin": "Until about age seven, children can produce the sounds of a foreign language without an accent. After this window closes it remains possible, but harder." },
+              { "kalin": "Cognitive flexibility", "metin": "Bilingual children frequently perform better on executive function tests such as attention switching, problem solving, and emotional regulation." }
+            ]
+          },
+          "So teaching your child Kurdish is not merely a cultural duty — it is a tangible investment in their brain development."
+        ]
+      },
+      {
+        "id": "ortam",
+        "numara": 3,
+        "baslik": "How to create a Kurdish-speaking environment at home",
+        "paragraflar": [
+          "There is one golden rule: increase the time your child hears Kurdish. The following methods have been tried by bilingual families worldwide and proven to work.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "One-parent-one-language (OPOL)", "metin": "One parent speaks only Kurdish, the other uses the local language. Consistency matters above all; the child learns which sound to associate with which face." },
+              { "kalin": "Language by place and time", "metin": "Set boundaries — Kurdish at the dinner table, the local language in the bedroom. The child internalizes which language belongs in which setting." },
+              { "kalin": "Songs and nursery rhymes", "metin": "Music makes language stick. Adding a Kurdish children's song to the morning routine turns the language into a source of joy." },
+              { "kalin": "Bedtime reading", "metin": "Choose short Kurdish stories. Instead of translating every sentence word for word, point to pictures and build context; the child will infer meaning." },
+              { "kalin": "Phone calls with grandparents", "metin": "Weekly video calls give the child a meaningful reason to use the language. There is no more natural context for practice." },
+              { "kalin": "Holidays and celebrations", "metin": "Newroz, Eyda Qurbanê, Eyda Remezanê — these are the days when language is woven with culture. Prepare for and celebrate them in Kurdish." }
+            ]
+          },
+          "Remember: 30 minutes of consistent Kurdish daily is far more effective than three hours of intense exposure once a month. Continuity matters more than quantity."
+        ]
+      },
+      {
+        "id": "kurdifer",
+        "numara": 4,
+        "baslik": "How to use KurdiFêr",
+        "paragraflar": [
+          "KurdiFêr is a free learning platform that accompanies your child on their Kurdish journey. It has three main features:",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Word cards", "metin": "127 words in 8 categories: animals, colors, numbers, fruits, family, home, weather, and foods. Each card shows the Kurmancî spelling, the translation, a pronunciation guide, and an example sentence. The speaker button lets the child learn through correct sounds." },
+              { "kalin": "Memory match game", "metin": "A memory game matching 6 Kurmancî words with their emojis. Fun and learning combined; play removes the biggest obstacle in front of learning." },
+              { "kalin": "Progress tracking", "metin": "Each word has an \"I learned\" button. Your child's progress is stored in the browser — no signup required. The green bar next to categories makes small wins visible." }
+            ]
+          },
+          "Recommended routine: 5–10 minutes a day. Learn three new words, repeat the audio pronunciation, then play one round of the matching game. Don't push when the child has had enough; leave it for the next day. Patience is the strongest pedagogical tool on this journey."
+        ]
+      },
+      {
+        "id": "lehceler",
+        "numara": 5,
+        "baslik": "Kurmancî or Kirmanckî (Zazakî)?",
+        "paragraflar": [
+          "There are two main Kurdish variants spoken in the Turkish region, and which one to choose is often determined by your family's roots.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Kurmancî", "metin": "The most widely spoken Kurdish dialect. Used in eastern and southeastern Turkey, northern Syria, northern Iraq, and the European diaspora. Written with the Hawar (Latin) alphabet. With roughly 15–20 million speakers, it is the largest variant." },
+              { "kalin": "Kirmanckî (Zazakî)", "metin": "Spoken in the Tunceli, Bingöl, Diyarbakır, and Elazığ regions. Some linguists consider it a separate language; historically it followed a different path from Kurmancî. About 3–4 million speakers." }
+            ]
+          },
+          "The right answer is simple: choose your family's dialect. The child will first hear this language from grandparents and relatives. KurdiFêr offers both; start with the one you prefer, or use one on some days of the week and the other on other days. Children are far more adaptable to multiple variants than you might think."
+        ]
+      },
+      {
+        "id": "diaspora",
+        "numara": 6,
+        "baslik": "Special tips for diaspora families",
+        "paragraflar": [
+          "Germany, Sweden, the Netherlands, France, Belgium, the United Kingdom — extra care is needed for children growing up in countries with large Kurdish diaspora communities.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Majority-language pressure", "metin": "The child experiences German, Dutch, or French at school, in the streets, and with friends. If Kurdish isn't experienced just as naturally at home, even passive understanding fades over the years." },
+              { "kalin": "Pride, not shame", "metin": "Make the child feel that speaking Kurdish is cool and special. The \"our beautiful language\" frame is crucial for their identity development." },
+              { "kalin": "Community bond", "metin": "Kurdish associations, cultural centers, and online chat groups show the child they are not alone. Speaking Kurdish with peers is a far stronger motivation than dialogue at home." },
+              { "kalin": "Annual visit", "metin": "If possible, travel to the ancestral region every year. Two weeks of practice can advance a child's skills faster than months of lessons at home." },
+              { "kalin": "Digital content", "metin": "Zarok TV, Kurdmax Kids, and YouTube offer Kurdish children's programs. Instead of treating screen time as an enemy, make it an ally — even passive exposure has value." }
+            ]
+          },
+          "For a diaspora child, the mother tongue is as real a home of belonging as a physical one. Keeping that home open is the parent's most beautiful gift."
+        ]
+      },
+      {
+        "id": "hatalar",
+        "numara": 7,
+        "baslik": "Common mistakes and how to avoid them",
+        "paragraflar": [
+          "The following pitfalls trap even the most well-intentioned parents. Knowing about them in advance lets you avoid them from the start.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Being a translator", "metin": "Saying every sentence in both languages, like \"Are you tired? — Tu westiyayî?\" The child learns Kurdish not as an independent system but as a shadow of Turkish. Build context directly in Kurdish." },
+              { "kalin": "Constant correction", "metin": "Correcting a child's small mistakes immediately breaks their courage. Model the correct sentence instead — the child will catch the difference on their own." },
+              { "kalin": "Inconsistency", "metin": "Kurdish today, Turkish tomorrow, mixed the next day. The child cannot tell which language belongs when and pulls back from both." },
+              { "kalin": "Comparison", "metin": "Don't say \"the neighbor's child speaks so beautifully.\" Each child has their own language rhythm; comparison kills motivation." },
+              { "kalin": "Giving up too early", "metin": "In the first year the child may not speak Kurdish but is likely understanding it. This \"silent period\" is natural and necessary — be patient for production." },
+              { "kalin": "Framing the language as \"hard\"", "metin": "Saying \"Kurdish is so hard\" in front of the child builds an invisible wall in front of the language. Use the \"our beautiful and special language\" frame instead." }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sonuc",
+        "numara": 8,
+        "baslik": "Start now",
+        "paragraflar": [
+          "Teaching your child Kurdish is a marathon, not a sprint. Teach three words today. Sing a Kurdish lullaby tomorrow. Next week, have them talk to grandparents on the phone in Kurdish. These small steps grow into a deep transfer over the years.",
+          "KurdiFêr is free; no signup required. Open your browser and learn your first word with your child. We'll be here tomorrow and the day after."
+        ]
+      }
+    ],
+    "son_cta_baslik": "Start free today",
+    "son_cta_altyazi": "No signup required. Open your browser and learn your first Kurdish word with your child today.",
+    "son_cta_buton_kurmanci": "Start with Kurmancî",
+    "son_cta_buton_zazaca": "Start with Zazakî",
+    "tum_kategoriler_link": "Home"
   }
 }

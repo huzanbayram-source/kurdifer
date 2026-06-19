@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { DilSecici } from "@/components/DilSecici";
 import { LOCALES, type Locale } from "@/lib/i18n";
+import { getDictionary, type Dictionary } from "@/lib/dictionary";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -10,10 +11,6 @@ export function generateStaticParams() {
 const YAYIN_TARIHI = "2026-06-19";
 const SITE_URL = "https://kurdifer.app";
 const SAYFA_URL = `${SITE_URL}/ebeveynler`;
-const BASLIK =
-  "Çocuğunuza Evde Kürtçe Nasıl Öğretirsiniz? Ebeveynler İçin Kapsamlı Rehber";
-const ACIKLAMA =
-  "Çocuğunuza Kürtçe (Kurmancî veya Kirmanckî) nasıl öğretirsiniz? Bilim, günlük rutin önerileri, KurdiFêr kullanım rehberi, sık yapılan hatalar ve diaspora aileler için pratik ipuçları.";
 
 type ListeOge = { kalin?: string; metin: string };
 type Paragraf = string | { tip: "liste"; ogeler: ListeOge[] };
@@ -25,237 +22,9 @@ interface Bolum {
   paragraflar: Paragraf[];
 }
 
-const bolumler: Bolum[] = [
-  {
-    id: "giris",
-    numara: 1,
-    baslik: "Neden bu rehber gerekli?",
-    paragraflar: [
-      "Çocuğunuza Kürtçe öğretmek istiyorsunuz ama nereden başlayacağınızı bilmiyorsunuz. Yalnız değilsiniz. Türkiye'de, Avrupa'da ve dünyanın dört bir yanında binlerce ebeveyn aynı soruyu soruyor: Ana dilimi çocuğuma nasıl aktarırım?",
-      "İyi haber şu: bilim erken yaşta iki dilliliği destekliyor. Üç ila yedi yaş arasındaki çocuklar yeni bir dili ana dilleri kadar derin öğrenebiliyor. Üstelik Kürtçe — Kurmancî veya Kirmanckî — sadece bir iletişim aracı değil. Ninelerin ninnili, dengbêjlerin stranlı, Newroz'un alevli bir kültürel mirasıdır. Çocuğunuza bu dili aktarmak, ona kim olduğunu hatırlatmaktır.",
-      "Bu rehber size pratik adımlar verecek: hangi rutinler işe yarar, KurdiFêr'i nasıl kullanmalısınız, hangi tuzaklardan kaçınmalısınız ve diaspora ailelerinin neye dikkat etmesi gerektiğini.",
-    ],
-  },
-  {
-    id: "beyin",
-    numara: 2,
-    baslik: "Çocukların beyni dili öğrenirken ne yapar?",
-    paragraflar: [
-      "Doğumdan ergenliğe kadar geçen yıllar, dil öğrenimi için bir \"kritik dönem\" olarak bilinir. Bu dönemde çocuğun beyni dil sinyallerine olağanüstü duyarlıdır ve birden fazla dili paralel olarak ana dili gibi içselleştirebilir.",
-      {
-        tip: "liste",
-        ogeler: [
-          {
-            kalin: "Sinaptik budama",
-            metin:
-              "Beyin sık kullandığı sinir bağlantılarını güçlendirir, kullanılmayanları siler. Çocuk Kürtçe duymazsa, Kürtçeye ayrılmış nöral devreler zayıflar.",
-          },
-          {
-            kalin: "Fonoloji penceresi",
-            metin:
-              "Yaklaşık yedi yaşına kadar çocuklar, yabancı bir dilin seslerini aksansız üretebilir. Bu pencere kapandıktan sonra mümkün olsa da daha zordur.",
-          },
-          {
-            kalin: "Bilişsel esneklik",
-            metin:
-              "İki dilli çocuklar dikkat değiştirme, problem çözme ve duygusal düzenleme gibi yürütücü işlev testlerinde sıklıkla daha güçlü performans gösterir.",
-          },
-        ],
-      },
-      "Yani çocuğunuza Kürtçe öğretmek sadece bir kültürel borç değil, beyin gelişimine yapılan somut bir yatırımdır.",
-    ],
-  },
-  {
-    id: "ortam",
-    numara: 3,
-    baslik: "Evde Kürtçe konuşma ortamı nasıl yaratılır?",
-    paragraflar: [
-      "Tek bir altın kural vardır: çocuğun Kürtçe duyduğu süreyi artırın. Aşağıdaki yöntemler dünya çapındaki iki dilli aileler tarafından denenmiş ve işe yaradığı görülmüş yaklaşımlardır.",
-      {
-        tip: "liste",
-        ogeler: [
-          {
-            kalin: "Tek-ebeveyn-tek-dil (TETD)",
-            metin:
-              "Bir ebeveyn yalnızca Kürtçe konuşur, diğeri yerel dili kullanır. Tutarlılık her şeyden önemlidir; çocuk hangi sesi hangi yüzle ilişkilendireceğini öğrenir.",
-          },
-          {
-            kalin: "Yere ve zamana göre dil",
-            metin:
-              "Yemek masasında Kürtçe, yatak odasında yerel dil gibi sınırlar koyun. Çocuk hangi ortamda hangi dilin geçerli olduğunu içselleştirir.",
-          },
-          {
-            kalin: "Şarkı ve tekerleme",
-            metin:
-              "Müzik dili kalıcı kılar. Sabah rutinine bir Kürtçe çocuk şarkısı eklemek, dilin keyifle anılmasını sağlar.",
-          },
-          {
-            kalin: "Yatak öncesi okuma",
-            metin:
-              "Kısa Kürtçe öyküler seçin. Her cümleyi kelime kelime çevirmek yerine resimleri işaret ederek bağlam kurun; çocuk anlamı kendi çıkarır.",
-          },
-          {
-            kalin: "Dede-nine ile telefon",
-            metin:
-              "Haftalık görüntülü görüşmeler çocuğa dilin anlamlı bir kullanım amacı verir. Pratik için bundan daha doğal bir bağlam yoktur.",
-          },
-          {
-            kalin: "Bayram ve kutlamalar",
-            metin:
-              "Newroz, Eyda Qurbanê, Eyda Remezanê — bu günler dilin kültürle örüldüğü zamanlardır. Hazırlık ve kutlamaları Kürtçe yapın.",
-          },
-        ],
-      },
-      "Unutmayın: günde 30 dakika tutarlı Kürtçe, ayda bir defa üç saatlik yoğun maruziyetten çok daha etkilidir. Süreklilik miktardan önemlidir.",
-    ],
-  },
-  {
-    id: "kurdifer",
-    numara: 4,
-    baslik: "KurdiFêr'i nasıl kullanmalı?",
-    paragraflar: [
-      "KurdiFêr çocuğunuzun Kürtçe yolculuğunda yanınızda olan ücretsiz bir öğrenme platformudur. Üç ana özelliği vardır:",
-      {
-        tip: "liste",
-        ogeler: [
-          {
-            kalin: "Kelime kartları",
-            metin:
-              "8 kategoride 127 kelime: hayvanlar, renkler, sayılar, meyveler, aile, ev, hava ve yiyecekler. Her kartta Kurmancî yazımı, Türkçe karşılığı, telaffuz rehberi ve örnek bir cümle bulunur. Hoparlör butonu sayesinde çocuk doğru sesi duyarak öğrenir.",
-          },
-          {
-            kalin: "Eşleştirme oyunu",
-            metin:
-              "6 kelimenin Kurmancî adıyla emojisini eşleştiren bir bellek oyunu. Hem eğlenir hem öğrenir; oyun motivasyonu öğrenmenin önündeki en büyük engeli kaldırır.",
-          },
-          {
-            kalin: "İlerleme takibi",
-            metin:
-              "Her kelimenin yanında \"Öğrendim\" butonu vardır. Çocuğun ilerlemesi tarayıcıda saklanır; kayıt gerekmez. Kategorilerin yanındaki yeşil çubuk, küçük kazanımları görünür kılar.",
-          },
-        ],
-      },
-      "Önerilen rutin: günde 5-10 dakika. Üç yeni kelime öğrenin, sesli telaffuzu tekrar edin, sonunda bir tur eşleştirme oyunu oynayın. Çocuk konuya doyduğunda zorlamayın; ertesi güne bırakın. Sabır bu yolculuğun en güçlü pedagojik aracıdır.",
-    ],
-  },
-  {
-    id: "lehceler",
-    numara: 5,
-    baslik: "Kurmancî mi, Kirmanckî (Zazakî) mı?",
-    paragraflar: [
-      "Türkiye coğrafyasında konuşulan iki ana Kürtçe varyantı vardır ve hangisini seçeceğiniz çoğu zaman ailenizin kökeniyle belirlenir.",
-      {
-        tip: "liste",
-        ogeler: [
-          {
-            kalin: "Kurmancî",
-            metin:
-              "En yaygın Kürtçe lehçesi. Türkiye'nin doğu ve güneydoğusu, Suriye'nin kuzeyi, Kuzey Irak ve Avrupa diasporasında konuşulur. Hawar (Latin) alfabesiyle yazılır. Yaklaşık 15-20 milyon konuşurla en büyük varyanttır.",
-          },
-          {
-            kalin: "Kirmanckî (Zazakî)",
-            metin:
-              "Tunceli, Bingöl, Diyarbakır ve Elazığ bölgelerinde konuşulur. Bazı dilbilimciler bunu ayrı bir dil sayar; tarihsel olarak Kurmancî'den farklı bir yol izlemiştir. Konuşur sayısı yaklaşık 3-4 milyondur.",
-          },
-        ],
-      },
-      "Doğru cevap basit: ailenizin lehçesini seçin. Çocuk önce bu dili dedesinden, ninesinden, akrabalarından duyacak. KurdiFêr her ikisini de sunar; istediğiniz lehçeyle başlayın, hatta isterseniz haftanın bazı günlerini birine, bazı günlerini diğerine ayırın. Çocuklar birden fazla varyantla büyümeye sandığınızdan çok daha uyumludur.",
-    ],
-  },
-  {
-    id: "diaspora",
-    numara: 6,
-    baslik: "Diaspora aileleri için özel ipuçları",
-    paragraflar: [
-      "Almanya, İsveç, Hollanda, Fransa, Belçika, Birleşik Krallık — Kürt diasporasının yoğun olduğu ülkelerde büyüyen çocuklar için ek özen göstermek gerekir.",
-      {
-        tip: "liste",
-        ogeler: [
-          {
-            kalin: "Çoğunluk dilinin baskısı",
-            metin:
-              "Çocuk Almancayı, Felemenkçeyi veya Fransızcayı okulda, sokakta, oyun arkadaşlarıyla yaşar. Evde Kürtçeyi de aynı doğallıkla yaşamazsa, çocuğun pasif anlayışı bile yıllar içinde kaybolur.",
-          },
-          {
-            kalin: "Onur, utanç değil",
-            metin:
-              "Çocuğa Kürtçe konuşmasının havalı ve özel olduğunu hissettirin. \"Bizim güzel dilimiz\" çerçevesi, onun kimlik gelişimi için kritiktir.",
-          },
-          {
-            kalin: "Topluluk bağı",
-            metin:
-              "Kürt dernekleri, kültür merkezleri ve online sohbet grupları çocuğa yalnız olmadığını gösterir. Yaşıt arkadaşlarıyla Kürtçe konuşması, evdeki diyalogdan çok daha güçlü bir motivasyondur.",
-          },
-          {
-            kalin: "Yıllık ziyaret",
-            metin:
-              "Mümkünse her yıl ataların yaşadığı bölgeye seyahat edin. İki haftada çocuğun pratiği aylar süren ev derslerinden daha hızlı gelişir.",
-          },
-          {
-            kalin: "Dijital içerik",
-            metin:
-              "Zarok TV, Kurdmax Kids ve YouTube'da Kürtçe çocuk programları bulunur. Ekran zamanını düşmana çevirmek yerine müttefik yapın; pasif maruziyet bile değerlidir.",
-          },
-        ],
-      },
-      "Diaspora çocuğu için ana dil, fiziksel bir ev kadar gerçek bir aidiyet evidir. O evi açık tutmak ebeveynin en güzel armağanıdır.",
-    ],
-  },
-  {
-    id: "hatalar",
-    numara: 7,
-    baslik: "Sık yapılan hatalar ve nasıl kaçınılır?",
-    paragraflar: [
-      "Aşağıdaki tuzaklar en iyi niyetli ebeveynlerin bile düşebileceği yaygın hatalardır. Önceden bilirseniz baştan kaçınabilirsiniz.",
-      {
-        tip: "liste",
-        ogeler: [
-          {
-            kalin: "Çevirmen olmak",
-            metin:
-              "\"Yorgun musun? — Tu westiyayî?\" gibi her cümleyi çift dilde söylemek. Çocuk Kürtçeyi bağımsız bir sistem olarak değil, Türkçenin gölgesi olarak öğrenir. Bağlamı doğrudan Kürtçe kurun.",
-          },
-          {
-            kalin: "Sürekli düzeltme",
-            metin:
-              "Çocuğun küçük hatalarını anında düzeltmek cesaretini kırar. Doğru cümleyi modelleyerek tekrarlayın; çocuk farkı kendi yakalayacaktır.",
-          },
-          {
-            kalin: "Tutarsızlık",
-            metin:
-              "Bugün Kürtçe, yarın Türkçe, sonraki gün karışık. Çocuk hangi dilin ne zaman geçerli olduğunu bilemez ve ikisinden de geri çekilir.",
-          },
-          {
-            kalin: "Karşılaştırma",
-            metin:
-              "\"Komşunun çocuğu çok güzel konuşuyor\" demeyin. Her çocuğun dil ritmi kendine özeldir; karşılaştırma motivasyonu öldürür.",
-          },
-          {
-            kalin: "Erken vazgeçme",
-            metin:
-              "İlk yıl çocuk Kürtçe konuşmayabilir ama büyük olasılıkla anlıyordur. Bu \"pasif aşama\" doğal ve gereklidir; üretim için sabredin.",
-          },
-          {
-            kalin: "Dili \"zor\" diye sunmak",
-            metin:
-              "Çocuğun yanında \"Kürtçe çok zor\" demek dilin önüne görünmez bir duvar örer. Onun yerine \"bizim güzel ve özel dilimiz\" çerçevesini kullanın.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "sonuc",
-    numara: 8,
-    baslik: "Hemen başlayın",
-    paragraflar: [
-      "Çocuğunuza Kürtçe öğretmek bir maratondur, sprint değil. Bugün üç kelime öğretin. Yarın bir Kürtçe ninni söyleyin. Sonraki hafta dede-nine ile telefonda Kürtçe konuşturun. Bu küçük adımlar yıllar içinde köklü bir aktarım haline gelir.",
-      "KurdiFêr ücretsizdir, kayıt gerekmez. Tarayıcınızdan açın, çocuğunuzla birlikte ilk kelimeyi öğrenin. Yarın da, ondan sonraki gün de buradayız.",
-    ],
-  },
-];
+type EbeveynlerDict = Dictionary["ebeveynler"];
 
-function kelimeSay(): number {
+function kelimeSay(bolumler: Bolum[]): number {
   let n = 0;
   for (const b of bolumler) {
     n += b.baslik.split(/\s+/).length;
@@ -273,95 +42,93 @@ function kelimeSay(): number {
   return n;
 }
 
-const TOPLAM_KELIME = kelimeSay();
-const OKUMA_DAKIKA = Math.max(1, Math.ceil(TOPLAM_KELIME / 200));
-
-const TURKCE_TARIH = new Date(YAYIN_TARIHI).toLocaleDateString("tr-TR", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
-
-export const metadata: Metadata = {
-  title: `${BASLIK} | KurdiFêr`,
-  description: ACIKLAMA,
-  keywords: [
-    "Kürtçe öğretmek",
-    "çocuğa Kürtçe öğretme",
-    "Kurmancî öğren",
-    "Zazakî öğren",
-    "Kirmanckî",
-    "iki dilli çocuk",
-    "diaspora",
-    "ana dil",
-    "ebeveyn rehberi",
-    "KurdiFêr",
-  ],
-  authors: [{ name: "KurdiFêr" }],
-  alternates: { canonical: SAYFA_URL },
-  openGraph: {
-    title: BASLIK,
-    description: ACIKLAMA,
-    type: "article",
-    locale: "tr_TR",
-    url: SAYFA_URL,
-    siteName: "KurdiFêr",
-    publishedTime: YAYIN_TARIHI,
-    modifiedTime: YAYIN_TARIHI,
-    authors: ["KurdiFêr"],
-    images: [
-      {
-        url: `${SITE_URL}/og-ebeveynler.png`,
-        width: 1200,
-        height: 630,
-        alt: "Çocuklara Kürtçe öğretme rehberi — KurdiFêr",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: BASLIK,
-    description: ACIKLAMA,
-    images: [`${SITE_URL}/og-ebeveynler.png`],
-  },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: BASLIK,
-  description: ACIKLAMA,
-  author: {
-    "@type": "Organization",
-    name: "KurdiFêr",
-    url: SITE_URL,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "KurdiFêr",
-    logo: {
-      "@type": "ImageObject",
-      url: `${SITE_URL}/logo.png`,
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const dict = await getDictionary(params.locale);
+  const e = dict.ebeveynler;
+  const ogLocale =
+    params.locale === "en"
+      ? "en_US"
+      : params.locale === "ku"
+      ? "ku_TR"
+      : "tr_TR";
+  return {
+    title: `${e.meta_baslik} | KurdiFêr`,
+    description: e.meta_aciklama,
+    keywords: e.meta_anahtarlar,
+    authors: [{ name: "KurdiFêr" }],
+    alternates: { canonical: SAYFA_URL },
+    openGraph: {
+      title: e.meta_baslik,
+      description: e.meta_aciklama,
+      type: "article",
+      locale: ogLocale,
+      url: SAYFA_URL,
+      siteName: "KurdiFêr",
+      publishedTime: YAYIN_TARIHI,
+      modifiedTime: YAYIN_TARIHI,
+      authors: ["KurdiFêr"],
+      images: [
+        {
+          url: `${SITE_URL}/og-ebeveynler.png`,
+          width: 1200,
+          height: 630,
+          alt: e.meta_baslik,
+        },
+      ],
     },
-  },
-  datePublished: YAYIN_TARIHI,
-  dateModified: YAYIN_TARIHI,
-  image: [`${SITE_URL}/og-ebeveynler.png`],
-  inLanguage: "tr-TR",
-  wordCount: TOPLAM_KELIME,
-  timeRequired: `PT${OKUMA_DAKIKA}M`,
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": SAYFA_URL,
-  },
-};
+    twitter: {
+      card: "summary_large_image",
+      title: e.meta_baslik,
+      description: e.meta_aciklama,
+      images: [`${SITE_URL}/og-ebeveynler.png`],
+    },
+  };
+}
 
-export default function EbeveynlerPage({
+export default async function EbeveynlerPage({
   params,
 }: {
   params: { locale: Locale };
 }) {
   const locale = params.locale;
+  const dict = await getDictionary(locale);
+  const e = dict.ebeveynler;
+  const bolumler = e.bolumler as Bolum[];
+  const toplamKelime = kelimeSay(bolumler);
+  const okumaDakika = Math.max(1, Math.ceil(toplamKelime / 200));
+  const tarihLocale = e.tarih_locale ?? "tr-TR";
+  const tarih = new Date(YAYIN_TARIHI).toLocaleDateString(tarihLocale, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const inLanguage =
+    locale === "en" ? "en-US" : locale === "ku" ? "ku-TR" : "tr-TR";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: e.meta_baslik,
+    description: e.meta_aciklama,
+    author: { "@type": "Organization", name: "KurdiFêr", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "KurdiFêr",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+    },
+    datePublished: YAYIN_TARIHI,
+    dateModified: YAYIN_TARIHI,
+    image: [`${SITE_URL}/og-ebeveynler.png`],
+    inLanguage,
+    wordCount: toplamKelime,
+    timeRequired: `PT${okumaDakika}M`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": SAYFA_URL },
+  };
+
   return (
     <main className="min-h-screen bg-krem text-koyu">
       <script
@@ -369,21 +136,26 @@ export default function EbeveynlerPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Navbar locale={locale} />
+      <Navbar locale={locale} dict={dict} />
 
       <article>
-        <Hero locale={locale} />
-        <Icindekiler />
-        <MakaleGovde />
-        <SonCTA locale={locale} />
+        <Hero
+          locale={locale}
+          e={e}
+          tarih={tarih}
+          okumaDakika={okumaDakika}
+        />
+        <Icindekiler bolumler={bolumler} baslik={e.icindekiler_baslik} />
+        <MakaleGovde bolumler={bolumler} />
+        <SonCTA locale={locale} e={e} />
       </article>
 
-      <Footer />
+      <Footer slogan={dict.footer.slogan} />
     </main>
   );
 }
 
-function Navbar({ locale }: { locale: Locale }) {
+function Navbar({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <header className="sticky top-0 z-30 border-b border-koyu/10 bg-krem/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
@@ -402,7 +174,7 @@ function Navbar({ locale }: { locale: Locale }) {
             href={`/${locale}`}
             className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 font-heading text-sm font-bold text-koyu shadow-sm transition hover:bg-koyu hover:text-krem"
           >
-            <span aria-hidden>←</span> Anasayfa
+            <span aria-hidden>←</span> {dict.navbar.anasayfa}
           </Link>
         </div>
       </nav>
@@ -410,57 +182,73 @@ function Navbar({ locale }: { locale: Locale }) {
   );
 }
 
-function Hero({ locale }: { locale: Locale }) {
+function Hero({
+  locale,
+  e,
+  tarih,
+  okumaDakika,
+}: {
+  locale: Locale;
+  e: EbeveynlerDict;
+  tarih: string;
+  okumaDakika: number;
+}) {
   return (
     <section className="mx-auto max-w-3xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
       <Link
         href={`/${locale}`}
         className="inline-flex items-center gap-1 text-sm font-semibold text-koyu/60 transition hover:text-turuncu"
       >
-        <span aria-hidden>‹</span> Anasayfa
+        <span aria-hidden>‹</span> {e.geri_link}
       </Link>
 
       <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-sari/40 px-4 py-1.5 font-heading text-sm font-bold text-koyu">
-        <span aria-hidden>👨‍👩‍👧</span> Ebeveyn Rehberi
+        <span aria-hidden>👨‍👩‍👧</span> {e.rozet}
       </span>
 
       <h1 className="mt-4 font-heading text-4xl font-black leading-tight text-balance sm:text-5xl lg:text-6xl">
-        Çocuğunuza Evde{" "}
-        <span className="text-turuncu">Kürtçe</span> Nasıl Öğretirsiniz?
+        {e.hero_baslik_1}{" "}
+        <span className="text-turuncu">{e.hero_baslik_vurgu}</span>{" "}
+        {e.hero_baslik_2}
       </h1>
 
-      <p className="mt-3 text-base text-koyu/70 sm:text-lg">
-        Ebeveynler için kapsamlı rehber: bilim, günlük rutinler, doğru
-        araçlar ve sık yapılan hatalar.
-      </p>
+      <p className="mt-3 text-base text-koyu/70 sm:text-lg">{e.hero_altyazi}</p>
 
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-koyu/60">
         <span className="inline-flex items-center gap-1.5">
           <span aria-hidden>🕐</span>
-          <span>{OKUMA_DAKIKA} dakika okuma</span>
+          <span>
+            {okumaDakika} {e.okuma_etiketi}
+          </span>
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span aria-hidden>📅</span>
-          <time dateTime={YAYIN_TARIHI}>{TURKCE_TARIH}</time>
+          <time dateTime={YAYIN_TARIHI}>{tarih}</time>
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span aria-hidden>✍️</span>
-          <span>KurdiFêr Editöryal Ekibi</span>
+          <span>{e.yazar}</span>
         </span>
       </div>
     </section>
   );
 }
 
-function Icindekiler() {
+function Icindekiler({
+  bolumler,
+  baslik,
+}: {
+  bolumler: Bolum[];
+  baslik: string;
+}) {
   return (
     <nav
-      aria-label="İçindekiler"
+      aria-label={baslik}
       className="mx-auto mt-10 max-w-3xl px-4 sm:px-6 lg:px-8"
     >
       <div className="rounded-3xl border-2 border-koyu/10 bg-white p-5 shadow-sm sm:p-6">
         <p className="font-heading text-xs font-bold uppercase tracking-wider text-turuncu">
-          İçindekiler
+          {baslik}
         </p>
         <ol className="mt-3 space-y-2">
           {bolumler.map((b) => (
@@ -484,7 +272,7 @@ function Icindekiler() {
   );
 }
 
-function MakaleGovde() {
+function MakaleGovde({ bolumler }: { bolumler: Bolum[] }) {
   return (
     <div className="mx-auto mt-12 max-w-3xl px-4 sm:mt-16 sm:px-6 lg:px-8">
       {bolumler.map((b) => (
@@ -532,7 +320,7 @@ function Bolum({ bolum }: { bolum: Bolum }) {
   );
 }
 
-function SonCTA({ locale }: { locale: Locale }) {
+function SonCTA({ locale, e }: { locale: Locale; e: EbeveynlerDict }) {
   return (
     <section className="mx-auto mt-16 max-w-3xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
       <div className="rounded-3xl bg-koyu p-8 text-center text-krem shadow-xl sm:p-10">
@@ -540,24 +328,23 @@ function SonCTA({ locale }: { locale: Locale }) {
           🌱
         </p>
         <h2 className="mt-4 font-heading text-3xl font-black sm:text-4xl">
-          Hemen ücretsiz başlayın
+          {e.son_cta_baslik}
         </h2>
         <p className="mx-auto mt-3 max-w-md text-krem/75 sm:text-lg">
-          Kayıt gerekmez. Tarayıcınızı açın, çocuğunuzla ilk Kürtçe kelimenizi
-          bugün öğrenin.
+          {e.son_cta_altyazi}
         </p>
         <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link
-            href={`/${locale}`}
+            href={`/${locale}/kurmanji`}
             className="w-full rounded-full bg-turuncu px-7 py-3 font-heading font-bold text-krem shadow-lg shadow-turuncu/30 transition hover:-translate-y-0.5 hover:bg-sari hover:text-koyu sm:w-auto"
           >
-            Kurmancî ile başla
+            {e.son_cta_buton_kurmanci}
           </Link>
           <Link
             href={`/${locale}/zazaca`}
             className="w-full rounded-full border-2 border-krem/30 bg-koyu px-7 py-3 font-heading font-bold text-krem transition hover:border-turuncu hover:text-turuncu sm:w-auto"
           >
-            Zazakî ile başla
+            {e.son_cta_buton_zazaca}
           </Link>
         </div>
       </div>
@@ -565,7 +352,7 @@ function SonCTA({ locale }: { locale: Locale }) {
   );
 }
 
-function Footer() {
+function Footer({ slogan }: { slogan: string }) {
   return (
     <footer className="border-t border-koyu/10 bg-krem">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-koyu/60 sm:flex-row sm:px-6 lg:px-8">
@@ -573,7 +360,7 @@ function Footer() {
           © {new Date().getFullYear()}{" "}
           <span className="font-heading font-bold text-koyu">KurdiFêr</span>
         </p>
-        <p>Bi hezkirinê hatiye çêkirin · Sevgiyle yapıldı</p>
+        <p>{slogan}</p>
       </div>
     </footer>
   );

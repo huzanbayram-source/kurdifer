@@ -76,5 +76,165 @@
     "baslik_vurgu": "Peyvên",
     "baslik_sonrasi": "Zazakî",
     "altyazi": "Di zaravayê Zazakî de 127 peyv, bi rêbera bilêvkirinê û hevokên mînak."
+  },
+  "oyunlar_sayfa": {
+    "rozet": "Lîstik",
+    "baslik_oncesi": "Bilîze û",
+    "baslik_vurgu": "fêr bibe",
+    "baslik_sonrasi": "",
+    "altyazi": "Peyvan bi lîstikên kêfxweş xurt bike. Her lîstik jêhatîyeke cuda pêş dixe.",
+    "eslestirme_baslik": "Lihevkirin",
+    "eslestirme_aciklama": "Peyva Kurmancî bi emojîya wê re lihev bike. Lîstika bîr û lihevkirinê.",
+    "bulmaca_baslik": "Bulmacaya Peyvê",
+    "bulmaca_aciklama": "Tîpên kêm temam bike. Werger alîkar e, texmînên rast xal didin."
+  },
+  "ebeveynler": {
+    "meta_baslik": "Çawa Li Malê Zarokê Xwe Kurdî Hîn Bikî? Rêbera Berfireh Ji Bo Dêûbavan",
+    "meta_aciklama": "Çawa zarokê xwe Kurdî (Kurmancî yan Kirmanckî) hîn bikî? Zanist, pêşniyarên rûtîna rojane, rêbera bikaranîna KurdiFêr, çewtiyên belav û rêbernameyên pratîk ji bo malbatên diasporayê.",
+    "meta_anahtarlar": ["hînkirina Kurdî", "Kurdî hînkirina zarok", "Kurmancî fêr bibe", "Zazakî fêr bibe", "Kirmanckî", "zaroka duzimanî", "diaspora", "zimanê dayikê", "rêbera dêûbavan", "KurdiFêr"],
+    "geri_link": "Mal",
+    "rozet": "Rêbera Dêûbavan",
+    "hero_baslik_1": "Çawa Li Malê Zarokê Xwe",
+    "hero_baslik_vurgu": "Kurdî",
+    "hero_baslik_2": "Hîn Bikî?",
+    "hero_altyazi": "Rêbereke berfireh ji bo dêûbavan: zanist, rûtînên rojane, amûrên rast û çewtiyên belav.",
+    "okuma_etiketi": "deqîqe xwendin",
+    "yazar": "Tîma Edîtorî ya KurdiFêr",
+    "tarih_locale": "tr-TR",
+    "icindekiler_baslik": "Naverok",
+    "bolumler": [
+      {
+        "id": "giris",
+        "numara": 1,
+        "baslik": "Çima ev rêber pêwîst e?",
+        "paragraflar": [
+          "Tu dixwazî zarokê xwe Kurdî hîn bikî lê nizanî ji ku dest pê bikî. Tu ne tenê yî. Li Tirkiyê, li Ewropayê û li çar aliyên cîhanê, bi hezaran dêûbav heman pirsê dipirsin: Çawa zimanê dayika xwe ji zarokê xwe re vediguhêzim?",
+          "Mizgîniyek heye: zanist piştgiriya duzimaniyê di temenê biçûk de dike. Zarokên di navbera sê û heft saliyê de dikarin zimanekî nû bi qasî zimanê dayikê hilbijêrin. Û Kurdî — Kurmancî yan Kirmanckî — ne tenê amûra peyvendiyê ye. Mîrateke çandî ye ku bi loriyên dapîran, bi stranên dengbêjan û bi pêta Newrozê tê hilgirtin. Veguhastina vî zimanî ji zarokê te re tê wateya bibîranîna kî bûna wî.",
+          "Ev rêber gavên pratîk dide te: kîjan rûtîn kar dike, çawa KurdiFêr bi kar bînî, ji kîjan xefikan dûr bibî û malbatên diasporayê divê li çi miqate bin."
+        ]
+      },
+      {
+        "id": "beyin",
+        "numara": 2,
+        "baslik": "Dema zarok zimanekî fêr dibe, di mêjûyê de çi diqewime?",
+        "paragraflar": [
+          "Salên ji jidayikbûnê heta gihîştinê wek \"qonaxa krîtîk\" a fêrbûna ziman tê naskirin. Di vê demê de mêjûyê zarok pir hesas e li ber nîşaneyên ziman û dikare gelek zimanan bi hev re wek zimanê dayikê hilbijêre.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Birrîna sînaptîk", "metin": "Mêjû girêdanên sînavî yên pir tên bikaranîn xurt dike, yên nayên bikaranîn jê dike. Heger zarok Kurdî nebihîse, gerokên neuralî yên ji bo Kurdî qels dibin." },
+              { "kalin": "Pencereya fonolojîk", "metin": "Heta dora heft saliyê, zarok dikarin dengên zimanekî biyanî bê devok bilêv bikin. Piştî girtina vê pencereyê hîn jî mimkun e, lê dijwartir e." },
+              { "kalin": "Maliyatî ya naskirinê", "metin": "Zarokên duzimanî pirî caran di testên fonksiyona bicîhanînê yên wek guhertina baldariyê, çareserkirina pirsgirêkan û rêzkirina hestî de performansa xurttir nîşan didin." }
+            ]
+          },
+          "Yanî hînkirina Kurdî ji zarokê te re ne tenê deynekî çandî ye; veberhênaneke berbiçav e di pêşveçûna mêjûyê de."
+        ]
+      },
+      {
+        "id": "ortam",
+        "numara": 3,
+        "baslik": "Çawa li malê derdorek axaftina Kurdî tê çêkirin?",
+        "paragraflar": [
+          "Yek qaîdeya zêrîn heye: dema ku zarok Kurdî dibihîze zêde bike. Rêbazên jêrîn ji aliyê malbatên duzimanî yên li seranserê cîhanê hatine ceribandin û kar dikin.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Yek dêûbav-yek ziman (TETD)", "metin": "Yek ji dêûbavan tenê Kurdî diaxive, yê din zimanê herêmê bi kar tîne. Domandin ji her tiştî girîngtir e; zarok hîn dibe kîjan dengî bi kîjan rûyî re bigirêde." },
+              { "kalin": "Ziman li gor cih û demê", "metin": "Sînoran daynin — Kurdî li ser maseya xwarinê, zimanê herêmê di odeya razanê de. Zarok dixebitîne ku kîjan ziman di kîjan rewşê de derbasdar e." },
+              { "kalin": "Stran û çîrokên zarokan", "metin": "Mûzîk zimanî mayînde dike. Lê zêdekirina stranekê Kurdî ji bo zarokan li rûtîna sibê, ziman ji zarok re kêfxweş dike." },
+              { "kalin": "Xwendina berî razanê", "metin": "Çîrokên kurt ên Kurdî hilbijêrin. Li dewsa wergerandina her hevokê peyv bi peyv, bi nîşandayîna wêneyan zemînê ava bikin; zarok wateyê bi xwe derdixe." },
+              { "kalin": "Telefon bi dapîr û bapîran re", "metin": "Hevdîtinên vîdyoyî yên heftane sebebeke bi wate ji bo bikaranîna ziman didin zarok. Ji bo pratîkê ji vê derdoreke xwezayîtir tune ye." },
+              { "kalin": "Cejn û pîrozbahî", "metin": "Newroz, Eyda Qurbanê, Eyda Remezanê — ev roj rojên ziman bi çandê tê girêdayî ne. Amadekarî û pîrozbahiyê bi Kurdî bikin." }
+            ]
+          },
+          "Ji bîr nekin: 30 deqîqe Kurdiya domdar a rojane, ji sê saetan pêşkêşkirina giran ya yek caran mehê pirtir bandordar e. Domandin ji mîqdarê girîngtir e."
+        ]
+      },
+      {
+        "id": "kurdifer",
+        "numara": 4,
+        "baslik": "Çawa KurdiFêr bi kar bînî?",
+        "paragraflar": [
+          "KurdiFêr platformeke fêrbûnê ya bêbihayî ye ku di rêwîtiya zarokê te ya Kurdî de bi te re ye. Sê taybetmendiyên sereke yên wê hene:",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Kartên peyvan", "metin": "127 peyv di 8 kategoriyan de: heywan, reng, hejmar, fêkî, malbat, mal, hewa û xwarin. Di her kartê de nivîsîna Kurmancî, wateya wê, rêbera bilêvkirinê û hevokek mînak heye. Bi bişkoja dengbêjê re, zarok bi guhdarkirina dengê rast fêr dibe." },
+              { "kalin": "Lîstika lihevkirinê", "metin": "Lîstika bîrê ya ku navê Kurmancî yê 6 peyvan bi emojiyên wan re lihev dike. Hem kêf dike, hem fêr dibe; lîstik motîvasyona herî mezin a li ber fêrbûnê radike." },
+              { "kalin": "Şopandina pêşveçûnê", "metin": "Li kêleka her peyvê bişkoja \"Min Fêr Bû\" heye. Pêşveçûna zarokê te di gerokê de tê hilanîn; tomarkirin ne pêwîst e. Çubûka kesk a li kêleka kategoriyan zafêrbûnên biçûk dîtbar dike." }
+            ]
+          },
+          "Rûtîna pêşniyarkirî: 5-10 deqîqe rojane. Sê peyvên nû fêr bibin, bilêvkirina dengî dubare bikin, dawiyê turekê lîstika lihevkirinê bilîzin. Dema ku zarok têr bû, zorê nede; ji bo roja din bihêle. Sebir di vê rêwîtiyê de amûra herî bihêz a pedagogjîk e."
+        ]
+      },
+      {
+        "id": "lehceler",
+        "numara": 5,
+        "baslik": "Kurmancî yan Kirmanckî (Zazakî)?",
+        "paragraflar": [
+          "Du varyantên sereke yên Kurdî yên li herêma Tirkiyê tên axaftin hene û kîjanê hilbijêrî pirî caran bi koka malbata te tê diyarkirin.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Kurmancî", "metin": "Zaravayê herî belav ê Kurdî. Li rojhilat û başûrê rojhilatê Tirkiyê, bakurê Sûriyê, bakurê Iraqê û diasporaya Ewropî tê axaftin. Bi alfabeya Hawar (Latînî) tê nivîsîn. Bi qasî 15-20 milyon axaftvanan re varyanta herî mezin e." },
+              { "kalin": "Kirmanckî (Zazakî)", "metin": "Li herêmên Tunceli, Bingöl, Diyarbakır û Elazığ tê axaftin. Hin zimanzan vê wek zimanekî cuda dihesibînin; ji aliyê dîrokî ve ji Kurmancî bi rêyek cuda pêş ketiye. Hejmara axaftvanan dora 3-4 milyon e." }
+            ]
+          },
+          "Bersiva rast hêsan e: zaravayê malbata xwe hilbijêre. Zarok pêşî vî zimanî ji bapîr, dapîr û lêzimên xwe dibihîze. KurdiFêr her duyan jî pêşkêş dike; bi yekî dest pê bike, an hin rojên hefteyê yekê û rojên din yê din bi kar bînin. Zarok ji ya ku tu difikirî bêtir bi gelek varyantan re aram in."
+        ]
+      },
+      {
+        "id": "diaspora",
+        "numara": 6,
+        "baslik": "Pêşniyarên taybet ji bo malbatên diasporayê",
+        "paragraflar": [
+          "Almanya, Swêd, Holenda, Fransa, Belçîka, Brîtanya — di welatên ku diasporaya Kurd lê zêde ye de mezin dibin, balkêşiyeke zêde divê.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Pestiya zimanê piraniyê", "metin": "Zarok Almanî, Holendî yan Fransî li dibistanê, li kolanan û bi hevalên xwe re dijî. Heger Kurdî jî bi heman xwezayîbûnê li malê neyê jiyandin, fêmkirina pasîf a zarok di nav salan de winda dibe." },
+              { "kalin": "Şerefdarî, ne şerm", "metin": "Bide xuyakirin ji zarok re ku axaftina Kurdî sar û taybet e. Çarçoveya \"zimanê me yê delal\" ji bo pêşveçûna kesayetiya wî krîtîk e." },
+              { "kalin": "Girêdana civakî", "metin": "Komeleyên Kurdî, navendên çandî û koman têkiliya online nîşan dide zarok ku ew ne bi tenê ye. Axaftina Kurdî bi hevalên temenê xwe re ji axaftina li malê motîvasyoneke pir bihêztir e." },
+              { "kalin": "Serdana salane", "metin": "Heger mimkun be, her sal here herêma bav û kalan. Du hefteyan pratîk dikare jêhatîyên zarok ji mehên dersên malê zûtir pêş bixe." },
+              { "kalin": "Naveroka dîjîtal", "metin": "Zarok TV, Kurdmax Kids û YouTube bernameyên Kurdî ji bo zarokan pêşkêş dikin. Li dewsa veguhastina dema ekrana wek dijmin, wê wek hevalbendekê bike — maruziyeta pasîf jî hêja ye." }
+            ]
+          },
+          "Ji bo zaroka diasporayê, zimanê dayikê wek malekê fîzîkî, mala aydiyatiyê ya rast e. Wê malê vekirî hiştin diyariya herî delal a dêûbav e."
+        ]
+      },
+      {
+        "id": "hatalar",
+        "numara": 7,
+        "baslik": "Çewtiyên belav û çawa dûr bibî",
+        "paragraflar": [
+          "Xefikên jêrîn xewtiyên belav in ku tewra dêûbavên bi niyeta herî baş jî dikarin bikevin nav wan. Heger te di vê derbarê de berê agahî hebe, tu dikarî ji destpêkê bigirî.",
+          {
+            "tip": "liste",
+            "ogeler": [
+              { "kalin": "Bûna wergêr", "metin": "Wek \"Tu westiyayî? — Yorgun musun?\" her hevokî bi du zimanan gotin. Zarok Kurdî ne wek sîstema serbixwe, lê wek siya Tirkî fêr dibe. Zemînê rasterast bi Kurdî ava bike." },
+              { "kalin": "Rastkirina domdar", "metin": "Çewtiyên biçûk ên zarok di cih de rastkirin cesareta wî dişikîne. Hevoka rast wek mînak dubare bike; zarok cudahiyê bi xwe dê bigire." },
+              { "kalin": "Bê domandin", "metin": "Îro Kurdî, sibê Tirkî, roja din tevlihev. Zarok nizane kîjan ziman kengê derbasdar e û ji her duyan paşve dikişe." },
+              { "kalin": "Berawirdkirin", "metin": "Nebêje \"zarokê cîranê me çiqas xweş diaxive.\" Her zarokî ritma xwe ya ziman heye; berawirdkirin motîvasyonê dikuje." },
+              { "kalin": "Zû dev jê berdan", "metin": "Di sala yekem de zarok belkî Kurdî neaxive lê pir caran wê fêm dike. Ev \"qonaxa bêdeng\" xwezayî û pêwîst e — ji bo hilberînê sebir bike." },
+              { "kalin": "Wek \"zor\" pêşkêşkirina zimanî", "metin": "Li ber zarok gotina \"Kurdî pir zor e\" dîwarekî nedîtbar li pêş ziman ava dike. Li dewsa wê çarçoveya \"zimanê me yê delal û taybet\" bi kar bîne." }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sonuc",
+        "numara": 8,
+        "baslik": "Niha dest pê bike",
+        "paragraflar": [
+          "Hînkirina Kurdî ji zarokê te maratonê ye, ne sprint. Îro sê peyvan hîn bike. Sibê lorîyeke Kurdî bibêje. Hefteya dahatî bi dapîr û bapîran re bi telefonê bi Kurdî biaxive. Ev gavên biçûk di nav salan de dibin veguhastinek kûr.",
+          "KurdiFêr bêbihayî ye, tomarkirin ne pêwîst e. Gerokê xwe veke, bi zarokê xwe re peyva yekem fêr bibe. Sibê û rojên din jî em ê li vir bin."
+        ]
+      }
+    ],
+    "son_cta_baslik": "Niha bi belaş dest pê bike",
+    "son_cta_altyazi": "Tomarkirin ne pêwîst e. Gerokê xwe veke, îro bi zarokê xwe re peyva yekem a Kurdî fêr bibe.",
+    "son_cta_buton_kurmanci": "Bi Kurmancî dest pê bike",
+    "son_cta_buton_zazaca": "Bi Zazakî dest pê bike",
+    "tum_kategoriler_link": "Mal"
   }
 }

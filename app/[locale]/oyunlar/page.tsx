@@ -4,14 +4,20 @@ import { DilSecici } from "@/components/DilSecici";
 import { LOCALES, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 
-export const metadata: Metadata = {
-  title: "Oyunlar — KurdiFêr",
-  description:
-    "Çocukların eğlenerek Kürtçe öğrendiği interaktif oyunlar: eşleştirme ve kelime bulmaca.",
-};
-
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const dict = await getDictionary(params.locale);
+  return {
+    title: `${dict.oyunlar_sayfa.rozet} — KurdiFêr`,
+    description: dict.oyunlar_sayfa.altyazi,
+  };
 }
 
 interface Oyun {
@@ -24,29 +30,6 @@ interface Oyun {
   metin: string;
 }
 
-const oyunlar: Oyun[] = [
-  {
-    id: "eslestirme",
-    href: (l) => `/${l}/oyunlar/eslestirme`,
-    emoji: "🎴",
-    baslik: "Eşleştirme",
-    aciklama:
-      "Kurmancî kelimeyi emojisiyle eşleştir. Bellek ve eşleştirme oyunu.",
-    renk: "bg-turuncu",
-    metin: "text-krem",
-  },
-  {
-    id: "kelime-bulmaca",
-    href: (l) => `/${l}/oyunlar/kelime-bulmaca`,
-    emoji: "🔤",
-    baslik: "Kelime Bulmaca",
-    aciklama:
-      "Eksik harfleri tamamla. Türkçe karşılığı yardımcı, doğru tahmin puan kazandırır.",
-    renk: "bg-sari",
-    metin: "text-koyu",
-  },
-];
-
 export default async function OyunlarPage({
   params,
 }: {
@@ -54,6 +37,27 @@ export default async function OyunlarPage({
 }) {
   const dict = await getDictionary(params.locale);
   const locale = params.locale;
+
+  const oyunlar: Oyun[] = [
+    {
+      id: "eslestirme",
+      href: (l) => `/${l}/oyunlar/eslestirme`,
+      emoji: "🎴",
+      baslik: dict.oyunlar_sayfa.eslestirme_baslik,
+      aciklama: dict.oyunlar_sayfa.eslestirme_aciklama,
+      renk: "bg-turuncu",
+      metin: "text-krem",
+    },
+    {
+      id: "kelime-bulmaca",
+      href: (l) => `/${l}/oyunlar/kelime-bulmaca`,
+      emoji: "🔤",
+      baslik: dict.oyunlar_sayfa.bulmaca_baslik,
+      aciklama: dict.oyunlar_sayfa.bulmaca_aciklama,
+      renk: "bg-sari",
+      metin: "text-koyu",
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-krem text-koyu">
@@ -89,14 +93,19 @@ export default async function OyunlarPage({
       <section className="mx-auto max-w-4xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-sari/40 px-4 py-1.5 font-heading text-sm font-bold text-koyu">
-            <span aria-hidden>🎮</span> {dict.navbar.oyunlar}
+            <span aria-hidden>🎮</span> {dict.oyunlar_sayfa.rozet}
           </span>
           <h1 className="mt-4 font-heading text-4xl font-black sm:text-5xl">
-            Oyna ve <span className="text-turuncu">öğren</span>
+            {dict.oyunlar_sayfa.baslik_oncesi}
+            {dict.oyunlar_sayfa.baslik_oncesi && " "}
+            <span className="text-turuncu">
+              {dict.oyunlar_sayfa.baslik_vurgu}
+            </span>
+            {dict.oyunlar_sayfa.baslik_sonrasi && " "}
+            {dict.oyunlar_sayfa.baslik_sonrasi}
           </h1>
           <p className="mt-3 max-w-xl text-base text-koyu/70 sm:text-lg">
-            Kelimeleri eğlenceli oyunlarla pekiştir. Her oyun farklı bir
-            beceriyi geliştirir.
+            {dict.oyunlar_sayfa.altyazi}
           </p>
         </div>
       </section>
