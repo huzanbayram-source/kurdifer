@@ -2,7 +2,7 @@
   "navbar": {
     "dersler": "Dersler",
     "kurmanci": "Kurmancî",
-    "zazaca": "Zazaca",
+    "zazaca": "Zazakî",
     "oyunlar": "Oyunlar",
     "ebeveynler": "Ebeveynler",
     "videolar": "Videolar",
@@ -27,7 +27,7 @@
   },
   "lehce_secici": {
     "kurmanci": "Kurmancî",
-    "zazaca": "Zazaca"
+    "zazaca": "Zazakî"
   },
   "dil_secici": {
     "etiket": "Dil",
@@ -37,9 +37,9 @@
     "kelime": "kelime",
     "ipucu_dokun": "Bir karta dokun, örnek cümleyi gör.",
     "ornek_cumle": "Örnek cümle",
-    "tum_zazaca_kategorileri": "Tüm Zazaca kategorileri",
+    "tum_zazaca_kategorileri": "Tüm Zazakî kategorileri",
     "tum_kurmanci_kategorileri": "Tüm Kurmancî kategorileri",
-    "zazaca_rozet": "Zazaca",
+    "zazaca_rozet": "Zazakî",
     "kurmanci_rozet": "Kurmancî"
   },
   "ilerleme": {

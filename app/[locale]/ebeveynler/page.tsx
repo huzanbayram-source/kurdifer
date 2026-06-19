@@ -141,7 +141,7 @@ const bolumler: Bolum[] = [
   {
     id: "lehceler",
     numara: 5,
-    baslik: "Kurmancî mi, Kirmanckî (Zazaca) mı?",
+    baslik: "Kurmancî mi, Kirmanckî (Zazakî) mı?",
     paragraflar: [
       "Türkiye coğrafyasında konuşulan iki ana Kürtçe varyantı vardır ve hangisini seçeceğiniz çoğu zaman ailenizin kökeniyle belirlenir.",
       {
@@ -153,7 +153,7 @@ const bolumler: Bolum[] = [
               "En yaygın Kürtçe lehçesi. Türkiye'nin doğu ve güneydoğusu, Suriye'nin kuzeyi, Kuzey Irak ve Avrupa diasporasında konuşulur. Hawar (Latin) alfabesiyle yazılır. Yaklaşık 15-20 milyon konuşurla en büyük varyanttır.",
           },
           {
-            kalin: "Kirmanckî (Zazaca)",
+            kalin: "Kirmanckî (Zazakî)",
             metin:
               "Tunceli, Bingöl, Diyarbakır ve Elazığ bölgelerinde konuşulur. Bazı dilbilimciler bunu ayrı bir dil sayar; tarihsel olarak Kurmancî'den farklı bir yol izlemiştir. Konuşur sayısı yaklaşık 3-4 milyondur.",
           },
@@ -289,7 +289,7 @@ export const metadata: Metadata = {
     "Kürtçe öğretmek",
     "çocuğa Kürtçe öğretme",
     "Kurmancî öğren",
-    "Zazaca öğren",
+    "Zazakî öğren",
     "Kirmanckî",
     "iki dilli çocuk",
     "diaspora",
@@ -557,7 +557,7 @@ function SonCTA({ locale }: { locale: Locale }) {
             href={`/${locale}/zazaca`}
             className="w-full rounded-full border-2 border-krem/30 bg-koyu px-7 py-3 font-heading font-bold text-krem transition hover:border-turuncu hover:text-turuncu sm:w-auto"
           >
-            Zazaca ile başla
+            Zazakî ile başla
           </Link>
         </div>
       </div>

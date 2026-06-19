@@ -30,8 +30,8 @@ export function generateMetadata({
   const kategori = getZazacaKategori(params.kategori);
   if (!kategori) return { title: "Kategori bulunamadı — KurdiFêr" };
   return {
-    title: `${kategori.tr} (${kategori.ku}) Zazaca — KurdiFêr`,
-    description: `Zazaca ${kategori.tr.toLowerCase()} kategorisinde ${kategori.kelimeler.length} kelime, telaffuzu ve örnek cümleleriyle.`,
+    title: `${kategori.tr} (${kategori.ku}) Zazakî — KurdiFêr`,
+    description: `Zazakî ${kategori.tr.toLowerCase()} kategorisinde ${kategori.kelimeler.length} kelime, telaffuzu ve örnek cümleleriyle.`,
   };
 }
 

@@ -15,7 +15,7 @@ export interface LocaleInfo {
 export const localeNames: Record<Locale, LocaleInfo> = {
   tr: { isim: "Türkçe", bayrak: "🇹🇷" },
   en: { isim: "English", bayrak: "🇬🇧" },
-  ku: { isim: "Kurdî", bayrak: "" },
+  ku: { isim: "Kurdî", bayrak: "☀️" },
 };
 
 interface CokDilliAd {

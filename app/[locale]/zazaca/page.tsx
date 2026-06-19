@@ -8,8 +8,8 @@ import { LOCALES, localeAd, localeAltAd, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 
 export const metadata: Metadata = {
-  title: "Zazaca — KurdiFêr",
-  description: "Çocuklar için Zazaca kelime kategorileri.",
+  title: "Zazakî — KurdiFêr",
+  description: "Çocuklar için Zazakî kelime kategorileri.",
 };
 
 export function generateStaticParams() {
@@ -27,7 +27,7 @@ const kartRenkleri = [
   "bg-sari/80",
 ];
 
-export default async function ZazacaPage({
+export default async function ZazakîPage({
   params,
 }: {
   params: { locale: Locale };
@@ -84,13 +84,13 @@ export default async function ZazacaPage({
       <section className="mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-sari/40 px-4 py-1.5 font-heading text-sm font-bold text-koyu">
-            <span aria-hidden>📚</span> Zazaca Kategorileri
+            <span aria-hidden>📚</span> Zazakî Kategorileri
           </span>
           <h1 className="mt-4 font-heading text-4xl font-black leading-tight sm:text-5xl">
-            Zazaca <span className="text-turuncu">kelimeler</span>
+            Zazakî <span className="text-turuncu">kelimeler</span>
           </h1>
           <p className="mt-3 max-w-xl text-base text-koyu/70 sm:text-lg">
-            Zazaca lehçesinde 127 kelime, telaffuz rehberi ve örnek cümlelerle.
+            Zazakî lehçesinde 127 kelime, telaffuz rehberi ve örnek cümlelerle.
           </p>
         </div>
 

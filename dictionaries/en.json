@@ -2,7 +2,7 @@
   "navbar": {
     "dersler": "Lessons",
     "kurmanci": "Kurmancî",
-    "zazaca": "Zazaca",
+    "zazaca": "Zazakî",
     "oyunlar": "Games",
     "ebeveynler": "Parents",
     "videolar": "Videos",
@@ -27,7 +27,7 @@
   },
   "lehce_secici": {
     "kurmanci": "Kurmancî",
-    "zazaca": "Zazaca"
+    "zazaca": "Zazakî"
   },
   "dil_secici": {
     "etiket": "Language",
@@ -37,9 +37,9 @@
     "kelime": "words",
     "ipucu_dokun": "Tap a card to see the example sentence.",
     "ornek_cumle": "Example sentence",
-    "tum_zazaca_kategorileri": "All Zazaca categories",
+    "tum_zazaca_kategorileri": "All Zazakî categories",
     "tum_kurmanci_kategorileri": "All Kurmancî categories",
-    "zazaca_rozet": "Zazaca",
+    "zazaca_rozet": "Zazakî",
     "kurmanci_rozet": "Kurmancî"
   },
   "ilerleme": {
