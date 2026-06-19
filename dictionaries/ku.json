@@ -5,6 +5,7 @@
     "zazaca": "Zazakî",
     "oyunlar": "Lîstik",
     "ebeveynler": "Dêûbav",
+    "hikayeler": "Çîrok",
     "videolar": "Vîdyo",
     "anasayfa": "Mal",
     "basla": "Dest Pê Bike",
@@ -76,6 +77,50 @@
     "baslik_vurgu": "Peyvên",
     "baslik_sonrasi": "Zazakî",
     "altyazi": "Di zaravayê Zazakî de 127 peyv, bi rêbera bilêvkirinê û hevokên mînak."
+  },
+  "videolar_sayfa": {
+    "rozet": "Vîdyo",
+    "baslik_oncesi": "Vîdyoyên",
+    "baslik_vurgu": "Kurdî",
+    "baslik_sonrasi": "",
+    "altyazi": "Stran, ders û bizgirên Kurmancî ji bo zarokan.",
+    "tumu": "Hemû",
+    "dakika": "dq",
+    "yakinda_rozet": "🎬 Di demek nêz de",
+    "filtre_etiketi": "Kategorîyê hilbijêre"
+  },
+  "video_izleme": {
+    "geri_link": "Hemû vîdyo",
+    "yakinda_baslik": "Ev vîdyo di demek nêz de tê zêdekirin",
+    "yakinda_emoji": "🎬",
+    "yakinda_altyazi": "Koda embed a YouTube ji bo vê vîdyoyê hîn ne hatiye danîn. Di demek nêz de wê amade be ji bo temaşekirinê.",
+    "yakinda_buton": "Vegere hemû vîdyoyan",
+    "diger_videolar": "Vîdyoyên din",
+    "ayni_kategori": "Ji heman kategorîyê",
+    "sure_etiketi": "dem",
+    "aciklama_etiketi": "Derbarê"
+  },
+  "hikayeler_sayfa": {
+    "rozet": "Çîrok",
+    "baslik_oncesi": "Çîrokên Kurdî, rûpel",
+    "baslik_vurgu": "bi rûpel",
+    "baslik_sonrasi": "",
+    "altyazi": "Çîrokên kurt ên Kurdî ji bo zarokan — bi vegotina dengî, dîmenên emoji û wergera Tirkî.",
+    "dakika": "dq",
+    "sayfa": "rûpel",
+    "sayfa_birim": "rûpel"
+  },
+  "hikaye_okuma": {
+    "geri_link": "Hemû çîrok",
+    "onceki": "Berê",
+    "sonraki": "Pêştir",
+    "sayfa_x_y": "{x} / {y}",
+    "ses_calma_placeholder": "Pelê deng dê di demek nêz de were zêdekirin 🎵",
+    "ses_calma_aria": "Guhê xwe bide çîrokê",
+    "bitti_emoji": "🎉",
+    "bitti_baslik": "Çîrok qediya!",
+    "bitti_buton": "Çîrokeke din bixwîne",
+    "bitti_yeniden": "Ji destpêkê bixwîne"
   },
   "oyunlar_sayfa": {
     "rozet": "Lîstik",

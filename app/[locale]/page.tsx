@@ -80,6 +80,8 @@ function Navbar({
           <NavLink href={`/${locale}/zazaca`}>{dict.zazaca}</NavLink>
           <NavLink href={`/${locale}/oyunlar`}>{dict.oyunlar}</NavLink>
           <NavLink href={`/${locale}/ebeveynler`}>{dict.ebeveynler}</NavLink>
+          <NavLink href={`/${locale}/hikayeler`}>{dict.hikayeler}</NavLink>
+          <NavLink href={`/${locale}/videolar`}>{dict.videolar}</NavLink>
         </ul>
 
         <div className="flex items-center gap-2">
@@ -98,6 +100,8 @@ function Navbar({
         <NavLink href={`/${locale}/zazaca`}>{dict.zazaca}</NavLink>
         <NavLink href={`/${locale}/oyunlar`}>{dict.oyunlar}</NavLink>
         <NavLink href={`/${locale}/ebeveynler`}>{dict.ebeveynler}</NavLink>
+        <NavLink href={`/${locale}/hikayeler`}>{dict.hikayeler}</NavLink>
+        <NavLink href={`/${locale}/videolar`}>{dict.videolar}</NavLink>
       </ul>
     </header>
   );

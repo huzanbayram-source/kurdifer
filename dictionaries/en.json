@@ -5,6 +5,7 @@
     "zazaca": "Zazakî",
     "oyunlar": "Games",
     "ebeveynler": "Parents",
+    "hikayeler": "Stories",
     "videolar": "Videos",
     "anasayfa": "Home",
     "basla": "Start",
@@ -76,6 +77,50 @@
     "baslik_vurgu": "words",
     "baslik_sonrasi": "",
     "altyazi": "127 words in Zazakî dialect with pronunciation guide and example sentences."
+  },
+  "videolar_sayfa": {
+    "rozet": "Videos",
+    "baslik_oncesi": "Kurdish",
+    "baslik_vurgu": "videos",
+    "baslik_sonrasi": "",
+    "altyazi": "Kurmancî songs, lessons and rhymes for children.",
+    "tumu": "All",
+    "dakika": "min",
+    "yakinda_rozet": "🎬 Coming soon",
+    "filtre_etiketi": "Select category"
+  },
+  "video_izleme": {
+    "geri_link": "All videos",
+    "yakinda_baslik": "This video is coming very soon",
+    "yakinda_emoji": "🎬",
+    "yakinda_altyazi": "The YouTube embed for this video isn't set yet. It will be available to watch soon.",
+    "yakinda_buton": "Back to all videos",
+    "diger_videolar": "Other videos",
+    "ayni_kategori": "From the same category",
+    "sure_etiketi": "duration",
+    "aciklama_etiketi": "About"
+  },
+  "hikayeler_sayfa": {
+    "rozet": "Stories",
+    "baslik_oncesi": "Kurdish stories,",
+    "baslik_vurgu": "page",
+    "baslik_sonrasi": "by page",
+    "altyazi": "Short Kurdish stories made for children — with audio narration, emoji visuals, and Turkish translation.",
+    "dakika": "min",
+    "sayfa": "pages",
+    "sayfa_birim": "page"
+  },
+  "hikaye_okuma": {
+    "geri_link": "All stories",
+    "onceki": "Previous",
+    "sonraki": "Next",
+    "sayfa_x_y": "{x} / {y}",
+    "ses_calma_placeholder": "Audio file coming soon 🎵",
+    "ses_calma_aria": "Listen to the story",
+    "bitti_emoji": "🎉",
+    "bitti_baslik": "Story finished!",
+    "bitti_buton": "Read another story",
+    "bitti_yeniden": "Read from the start"
   },
   "oyunlar_sayfa": {
     "rozet": "Games",

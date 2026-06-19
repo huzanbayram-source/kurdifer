@@ -58,6 +58,12 @@ export default async function KurmanjiPage({
             <NavLink href={`/${locale}/ebeveynler`}>
               {dict.navbar.ebeveynler}
             </NavLink>
+            <NavLink href={`/${locale}/hikayeler`}>
+              {dict.navbar.hikayeler}
+            </NavLink>
+            <NavLink href={`/${locale}/videolar`}>
+              {dict.navbar.videolar}
+            </NavLink>
           </ul>
 
           <div className="flex items-center gap-2">

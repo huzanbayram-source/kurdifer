@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "versiyon": "1.0"
+  },
+  "hikayeler": [
+    {
+      "id": "rovi-mirisk",
+      "baslik": {
+        "ku": "Rovî û Mirîşk",
+        "tr": "Tilki ve Tavuk",
+        "en": "The Fox and the Chicken"
+      },
+      "kategori": "hayvanlar",
+      "seviye": "kolay",
+      "emoji": "🦊",
+      "sure_dakika": 3,
+      "ses": "/audio/stories/ku/rovi-mirisk.mp3",
+      "kapak_gorsel": "/images/stories/rovi-mirisk.png",
+      "sayfalar": [
+        {
+          "ku": "Rojek rovî li daristanê digeriya.",
+          "tr": "Bir gün tilki ormanda dolaşıyordu.",
+          "emoji": "🦊🌲"
+        },
+        {
+          "ku": "Wî mirîşkek piçûk dît.",
+          "tr": "Küçük bir tavuk gördü.",
+          "emoji": "🐔"
+        },
+        {
+          "ku": "Mirîşk got: \"Tu çima li min dinihêrî?\"",
+          "tr": "Tavuk dedi: \"Bana neden bakıyorsun?\"",
+          "emoji": "💬"
+        },
+        {
+          "ku": "Rovî got: \"Ez dixwazim bibim hevalê te.\"",
+          "tr": "Tilki dedi: \"Senin arkadaşın olmak istiyorum.\"",
+          "emoji": "🤝"
+        },
+        {
+          "ku": "Mirîşk şad bû û got: \"Baş e, em bibin heval!\"",
+          "tr": "Tavuk mutlu oldu ve dedi: \"İyi, arkadaş olalım!\"",
+          "emoji": "😊"
+        },
+        {
+          "ku": "Ji wê rojê û pê ve, ew her dem bi hev re dilîzin.",
+          "tr": "O günden sonra her zaman birlikte oynadılar.",
+          "emoji": "🎉"
+        }
+      ]
+    },
+    {
+      "id": "kitika-belek",
+      "baslik": {
+        "ku": "Kitîka Belek",
+        "tr": "Benekli Kedi",
+        "en": "The Spotted Cat"
+      },
+      "kategori": "hayvanlar",
+      "seviye": "kolay",
+      "emoji": "🐱",
+      "sure_dakika": 2,
+      "ses": "/audio/stories/ku/kitika-belek.mp3",
+      "kapak_gorsel": "/images/stories/kitika-belek.png",
+      "sayfalar": [
+        {
+          "ku": "Kitîkek belek li ber dêrî rûniştibû.",
+          "tr": "Benekli bir kedi kapının önünde oturuyordu.",
+          "emoji": "🐱🚪"
+        },
+        {
+          "ku": "Wê bawer nedikir ku bikeve hundir.",
+          "tr": "İçeri girmeye cesaret edemiyordu.",
+          "emoji": "😟"
+        },
+        {
+          "ku": "Zarokek piçûk hat û got: \"Were, netirse!\"",
+          "tr": "Küçük bir çocuk geldi ve dedi: \"Gel, korkma!\"",
+          "emoji": "👧"
+        },
+        {
+          "ku": "Kitîk hêdî hêdî nêzîk bû.",
+          "tr": "Kedi yavaş yavaş yaklaştı.",
+          "emoji": "🐾"
+        },
+        {
+          "ku": "Niha ew her roj bi hev re dilîzin.",
+          "tr": "Şimdi her gün birlikte oynuyorlar.",
+          "emoji": "❤️"
+        }
+      ]
+    },
+    {
+      "id": "sevek-sor",
+      "baslik": {
+        "ku": "Sêvek Sor",
+        "tr": "Kırmızı Bir Elma",
+        "en": "A Red Apple"
+      },
+      "kategori": "meyveler",
+      "seviye": "kolay",
+      "emoji": "🍎",
+      "sure_dakika": 2,
+      "ses": "/audio/stories/ku/sevek-sor.mp3",
+      "kapak_gorsel": "/images/stories/sevek-sor.png",
+      "sayfalar": [
+        {
+          "ku": "Li darê sêvek sor hebû.",
+          "tr": "Ağaçta kırmızı bir elma vardı.",
+          "emoji": "🌳🍎"
+        },
+        {
+          "ku": "Zarokek wê dît û şad bû.",
+          "tr": "Bir çocuk onu gördü ve sevindi.",
+          "emoji": "👦😊"
+        },
+        {
+          "ku": "Wî sêv kişand û xwar.",
+          "tr": "Elmayı topladı ve yedi.",
+          "emoji": "🍽️"
+        },
+        {
+          "ku": "Sêv gelek tat bû!",
+          "tr": "Elma çok tatlıydı!",
+          "emoji": "😋"
+        },
+        {
+          "ku": "Wî got: \"Spas dar, tu pir başî!\"",
+          "tr": "Dedi: \"Teşekkürler ağaç, çok iyisin!\"",
+          "emoji": "🙏🌳"
+        }
+      ]
+    }
+  ]
+}

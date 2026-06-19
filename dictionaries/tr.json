@@ -5,6 +5,7 @@
     "zazaca": "Zazakî",
     "oyunlar": "Oyunlar",
     "ebeveynler": "Ebeveynler",
+    "hikayeler": "Hikayeler",
     "videolar": "Videolar",
     "anasayfa": "Anasayfa",
     "basla": "Başla",
@@ -76,6 +77,50 @@
     "baslik_vurgu": "kelimeler",
     "baslik_sonrasi": "",
     "altyazi": "Zazakî lehçesinde 127 kelime, telaffuz rehberi ve örnek cümlelerle."
+  },
+  "videolar_sayfa": {
+    "rozet": "Videolar",
+    "baslik_oncesi": "Kürtçe",
+    "baslik_vurgu": "videolar",
+    "baslik_sonrasi": "",
+    "altyazi": "Çocuklar için Kurmancî şarkılar, dersler ve tekerlemeler.",
+    "tumu": "Tümü",
+    "dakika": "dk",
+    "yakinda_rozet": "🎬 Yakında",
+    "filtre_etiketi": "Kategori seç"
+  },
+  "video_izleme": {
+    "geri_link": "Tüm videolar",
+    "yakinda_baslik": "Bu video çok yakında eklenecek",
+    "yakinda_emoji": "🎬",
+    "yakinda_altyazi": "Bu video için YouTube embed kodu henüz tanımlanmamış. Yakında izlemeye hazır olacak.",
+    "yakinda_buton": "Diğer videolara dön",
+    "diger_videolar": "Diğer videolar",
+    "ayni_kategori": "Aynı kategoriden",
+    "sure_etiketi": "süre",
+    "aciklama_etiketi": "Açıklama"
+  },
+  "hikayeler_sayfa": {
+    "rozet": "Hikayeler",
+    "baslik_oncesi": "Sayfa sayfa",
+    "baslik_vurgu": "Kürtçe",
+    "baslik_sonrasi": "hikayeler",
+    "altyazi": "Çocuklara özel kısa Kürtçe hikayeler — sesli anlatım, emoji görseller ve Türkçe çeviriyle.",
+    "dakika": "dk",
+    "sayfa": "sayfa",
+    "sayfa_birim": "sayfa"
+  },
+  "hikaye_okuma": {
+    "geri_link": "Tüm hikayeler",
+    "onceki": "Önceki",
+    "sonraki": "Sonraki",
+    "sayfa_x_y": "{x} / {y}",
+    "ses_calma_placeholder": "Ses dosyası yakında eklenecek 🎵",
+    "ses_calma_aria": "Hikayeyi dinle",
+    "bitti_emoji": "🎉",
+    "bitti_baslik": "Hikaye bitti!",
+    "bitti_buton": "Başka hikaye oku",
+    "bitti_yeniden": "Baştan oku"
   },
   "oyunlar_sayfa": {
     "rozet": "Oyunlar",

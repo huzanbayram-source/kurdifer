@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "versiyon": "1.0"
+  },
+  "kategoriler": [
+    {
+      "id": "sarkilar",
+      "baslik": {
+        "ku": "Stran",
+        "tr": "Şarkılar",
+        "en": "Songs"
+      },
+      "emoji": "🎵"
+    },
+    {
+      "id": "dersler",
+      "baslik": {
+        "ku": "Hîn",
+        "tr": "Dersler",
+        "en": "Lessons"
+      },
+      "emoji": "📖"
+    },
+    {
+      "id": "tekerlemeler",
+      "baslik": {
+        "ku": "Bizgir",
+        "tr": "Tekerlemeler",
+        "en": "Rhymes"
+      },
+      "emoji": "🎤"
+    }
+  ],
+  "videolar": [
+    {
+      "id": "ajal-stran",
+      "baslik": {
+        "ku": "Stranek Ajalan",
+        "tr": "Hayvanlar Şarkısı",
+        "en": "Animals Song"
+      },
+      "kategori": "sarkilar",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🐾🎵",
+      "aciklama": {
+        "ku": "Stranek xweş li ser ajalan, bi Kurmancî.",
+        "tr": "Hayvanlar hakkında güzel bir Kurmanji şarkı.",
+        "en": "A fun song about animals, in Kurmanji."
+      }
+    },
+    {
+      "id": "reng-stran",
+      "baslik": {
+        "ku": "Stranek Rengan",
+        "tr": "Renkler Şarkısı",
+        "en": "Colors Song"
+      },
+      "kategori": "sarkilar",
+      "youtube_id": "",
+      "sure_dakika": 2,
+      "emoji": "🎨🎵",
+      "aciklama": {
+        "ku": "Rengên cihê bi stranekê hîn bibe.",
+        "tr": "Farklı renkleri bir şarkıyla öğren.",
+        "en": "Learn different colors with a song."
+      }
+    },
+    {
+      "id": "hejmar-dersa",
+      "baslik": {
+        "ku": "Hejmar 1 Heta 10",
+        "tr": "1'den 10'a Sayılar",
+        "en": "Numbers 1 to 10"
+      },
+      "kategori": "dersler",
+      "youtube_id": "",
+      "sure_dakika": 4,
+      "emoji": "🔢📖",
+      "aciklama": {
+        "ku": "Hejmarên 1 heta 10 bi Kurmancî hîn bibe.",
+        "tr": "1'den 10'a sayıları Kurmanji öğren.",
+        "en": "Learn numbers 1 to 10 in Kurmanji."
+      }
+    },
+    {
+      "id": "rovi-bizgir",
+      "baslik": {
+        "ku": "Bizgira Rovî",
+        "tr": "Tilki Tekerlemesi",
+        "en": "Fox Rhyme"
+      },
+      "kategori": "tekerlemeler",
+      "youtube_id": "",
+      "sure_dakika": 1,
+      "emoji": "🦊🎤",
+      "aciklama": {
+        "ku": "Bizgirek xweş û bilez li ser rovî.",
+        "tr": "Tilki hakkında eğlenceli ve hızlı bir tekerleme.",
+        "en": "A fun and fast rhyme about the fox."
+      }
+    }
+  ]
+}
