@@ -6,6 +6,7 @@ import {
   getKategori,
   getVideo,
   getVideolarByKategori,
+  getVideoNavigation,
 } from "@/lib/videolar";
 import { DilSecici } from "@/components/DilSecici";
 import { LOCALES, localeAd, type Locale } from "@/lib/i18n";
@@ -43,6 +44,7 @@ export default async function VideoSayfa({
   const benzerVideolar = getVideolarByKategori(video.kategori)
     .filter((v) => v.id !== video.id)
     .slice(0, 3);
+  const { prev, next } = getVideoNavigation(video);
   const yakinda = !video.youtube_id;
   const baslik = localeAd(video.baslik, locale);
   const aciklama = localeAd(video.aciklama, locale);
@@ -133,6 +135,67 @@ export default async function VideoSayfa({
           </div>
         </div>
       </section>
+
+      {video.harfler && video.harfler.length > 0 && (
+        <section className="mx-auto max-w-4xl px-4 pt-8 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-2xl font-black sm:text-3xl">
+            🔤 {locale === "ku" ? "Tîpên vê dersê" : locale === "tr" ? "Bu dersin harfleri" : "Letters in this lesson"}
+          </h2>
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {video.harfler.map((h) => (
+              <div
+                key={h.harf}
+                className="flex flex-col items-center gap-2 rounded-2xl border-2 border-koyu/10 bg-white p-4 shadow-sm"
+              >
+                <span className="font-heading text-4xl font-black text-turuncu">{h.harf}</span>
+                <span className="text-3xl" aria-hidden>{h.emoji}</span>
+                <span className="font-heading text-sm font-bold text-koyu">{h.ornek_ku}</span>
+                <span className="text-xs font-semibold text-koyu/50">{h.ornek_tr}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {(prev || next) && (
+        <section className="mx-auto max-w-4xl px-4 pt-8 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3">
+            {prev ? (
+              <Link
+                href={`/${locale}/videolar/${prev.id}`}
+                className="flex flex-1 items-center gap-3 rounded-2xl border-2 border-koyu/10 bg-white px-4 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span className="text-2xl" aria-hidden>‹</span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-koyu/50">
+                    {locale === "ku" ? "Ya berê" : locale === "tr" ? "Önceki" : "Previous"}
+                  </p>
+                  <p className="truncate font-heading text-sm font-bold text-koyu">
+                    {prev.baslik[locale as "ku" | "tr" | "en"]}
+                  </p>
+                </div>
+              </Link>
+            ) : <div className="flex-1" />}
+
+            {next ? (
+              <Link
+                href={`/${locale}/videolar/${next.id}`}
+                className="flex flex-1 items-center justify-end gap-3 rounded-2xl border-2 border-turuncu/40 bg-turuncu/10 px-4 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="min-w-0 text-right">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-koyu/50">
+                    {locale === "ku" ? "Ya pêş" : locale === "tr" ? "Sıradaki" : "Next"}
+                  </p>
+                  <p className="truncate font-heading text-sm font-bold text-koyu">
+                    {next.baslik[locale as "ku" | "tr" | "en"]}
+                  </p>
+                </div>
+                <span className="text-2xl" aria-hidden>›</span>
+              </Link>
+            ) : <div className="flex-1" />}
+          </div>
+        </section>
+      )}
 
       {benzerVideolar.length > 0 && (
         <section className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 lg:px-8">

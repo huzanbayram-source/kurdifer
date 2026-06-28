@@ -29,6 +29,15 @@
         "en": "Rhymes"
       },
       "emoji": "🎤"
+    },
+    {
+      "id": "alfabe",
+      "baslik": {
+        "ku": "Alfabe",
+        "tr": "Alfabe",
+        "en": "Alphabet"
+      },
+      "emoji": "🔤"
     }
   ],
   "videolar": [
@@ -99,6 +108,125 @@
         "tr": "Tilki hakkında eğlenceli ve hızlı bir tekerleme.",
         "en": "A fun and fast rhyme about the fox."
       }
+    },
+    {
+      "id": "alfabe-1",
+      "baslik": { "ku": "Alfabêya Kurdî 1 — A-Ç", "tr": "Kürt Alfabesi 1 — A-Ç", "en": "Kurdish Alphabet 1 — A-Ç" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "A", "ornek_ku": "Av", "ornek_tr": "Su", "emoji": "💧" },
+        { "harf": "B", "ornek_ku": "Bav", "ornek_tr": "Baba", "emoji": "👨" },
+        { "harf": "C", "ornek_ku": "Ceng", "ornek_tr": "Savaş", "emoji": "⚔️" },
+        { "harf": "Ç", "ornek_ku": "Çiya", "ornek_tr": "Dağ", "emoji": "⛰️" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: A, B, C, Ç", "tr": "Öğren: A, B, C, Ç", "en": "Learn: A, B, C, Ç" }
+    },
+    {
+      "id": "alfabe-2",
+      "baslik": { "ku": "Alfabêya Kurdî 2 — D-F", "tr": "Kürt Alfabesi 2 — D-F", "en": "Kurdish Alphabet 2 — D-F" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "D", "ornek_ku": "Dar", "ornek_tr": "Ağaç", "emoji": "🌳" },
+        { "harf": "E", "ornek_ku": "Ev", "ornek_tr": "Ev", "emoji": "🏠" },
+        { "harf": "Ê", "ornek_ku": "Êş", "ornek_tr": "Acı", "emoji": "😣" },
+        { "harf": "F", "ornek_ku": "Fîl", "ornek_tr": "Fil", "emoji": "🐘" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: D, E, Ê, F", "tr": "Öğren: D, E, Ê, F", "en": "Learn: D, E, Ê, F" }
+    },
+    {
+      "id": "alfabe-3",
+      "baslik": { "ku": "Alfabêya Kurdî 3 — G-Î", "tr": "Kürt Alfabesi 3 — G-Î", "en": "Kurdish Alphabet 3 — G-Î" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "G", "ornek_ku": "Gul", "ornek_tr": "Gül", "emoji": "🌹" },
+        { "harf": "H", "ornek_ku": "Hêk", "ornek_tr": "Yumurta", "emoji": "🥚" },
+        { "harf": "I", "ornek_ku": "Stir", "ornek_tr": "Yıldız", "emoji": "⭐" },
+        { "harf": "Î", "ornek_ku": "Îsot", "ornek_tr": "Biber", "emoji": "🌶️" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: G, H, I, Î", "tr": "Öğren: G, H, I, Î", "en": "Learn: G, H, I, Î" }
+    },
+    {
+      "id": "alfabe-4",
+      "baslik": { "ku": "Alfabêya Kurdî 4 — J-M", "tr": "Kürt Alfabesi 4 — J-M", "en": "Kurdish Alphabet 4 — J-M" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "J", "ornek_ku": "Jin", "ornek_tr": "Kadın", "emoji": "👩" },
+        { "harf": "K", "ornek_ku": "Kitêb", "ornek_tr": "Kitap", "emoji": "📖" },
+        { "harf": "L", "ornek_ku": "Lewend", "ornek_tr": "Yakışıklı", "emoji": "😎" },
+        { "harf": "M", "ornek_ku": "Mal", "ornek_tr": "Ev", "emoji": "🏡" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: J, K, L, M", "tr": "Öğren: J, K, L, M", "en": "Learn: J, K, L, M" }
+    },
+    {
+      "id": "alfabe-5",
+      "baslik": { "ku": "Alfabêya Kurdî 5 — N-Q", "tr": "Kürt Alfabesi 5 — N-Q", "en": "Kurdish Alphabet 5 — N-Q" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "N", "ornek_ku": "Nan", "ornek_tr": "Ekmek", "emoji": "🍞" },
+        { "harf": "O", "ornek_ku": "Ode", "ornek_tr": "Oda", "emoji": "🚪" },
+        { "harf": "P", "ornek_ku": "Pisîk", "ornek_tr": "Kedi", "emoji": "🐱" },
+        { "harf": "Q", "ornek_ku": "Qaz", "ornek_tr": "Kaz", "emoji": "🦢" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: N, O, P, Q", "tr": "Öğren: N, O, P, Q", "en": "Learn: N, O, P, Q" }
+    },
+    {
+      "id": "alfabe-6",
+      "baslik": { "ku": "Alfabêya Kurdî 6 — R-T", "tr": "Kürt Alfabesi 6 — R-T", "en": "Kurdish Alphabet 6 — R-T" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "R", "ornek_ku": "Rovî", "ornek_tr": "Tilki", "emoji": "🦊" },
+        { "harf": "S", "ornek_ku": "Sêv", "ornek_tr": "Elma", "emoji": "🍎" },
+        { "harf": "Ş", "ornek_ku": "Şîr", "ornek_tr": "Süt", "emoji": "🥛" },
+        { "harf": "T", "ornek_ku": "Tava", "ornek_tr": "Tava", "emoji": "🍳" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: R, S, Ş, T", "tr": "Öğren: R, S, Ş, T", "en": "Learn: R, S, Ş, T" }
+    },
+    {
+      "id": "alfabe-7",
+      "baslik": { "ku": "Alfabêya Kurdî 7 — U-W", "tr": "Kürt Alfabesi 7 — U-W", "en": "Kurdish Alphabet 7 — U-W" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "U", "ornek_ku": "Uçik", "ornek_tr": "Köşe", "emoji": "📐" },
+        { "harf": "Û", "ornek_ku": "Ûris", "ornek_tr": "Rus", "emoji": "🌍" },
+        { "harf": "V", "ornek_ku": "Vala", "ornek_tr": "Boş", "emoji": "📭" },
+        { "harf": "W", "ornek_ku": "Welat", "ornek_tr": "Vatan", "emoji": "🏞️" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: U, Û, V, W", "tr": "Öğren: U, Û, V, W", "en": "Learn: U, Û, V, W" }
+    },
+    {
+      "id": "alfabe-8",
+      "baslik": { "ku": "Alfabêya Kurdî 8 — X-Z", "tr": "Kürt Alfabesi 8 — X-Z", "en": "Kurdish Alphabet 8 — X-Z" },
+      "kategori": "alfabe",
+      "youtube_id": "",
+      "sure_dakika": 3,
+      "emoji": "🔤",
+      "harfler": [
+        { "harf": "X", "ornek_ku": "Xanî", "ornek_tr": "Bina", "emoji": "🏢" },
+        { "harf": "Y", "ornek_ku": "Yar", "ornek_tr": "Sevgili", "emoji": "💕" },
+        { "harf": "Z", "ornek_ku": "Zinar", "ornek_tr": "Kaya", "emoji": "🪨" }
+      ],
+      "aciklama": { "ku": "Hîn bibe: X, Y, Z", "tr": "Öğren: X, Y, Z", "en": "Learn: X, Y, Z" }
     }
   ]
 }
